@@ -1,0 +1,3521 @@
+{
+  "totals": {
+    "skills_total": 120,
+    "with_frontmatter": 120,
+    "with_name": 120,
+    "with_description": 120,
+    "with_procedimiento": 120,
+    "with_contenido_base": 120,
+    "broken_link_files": 13,
+    "risk_totals": {
+      "remote_exec_pipe": 0,
+      "powershell_iex": 2,
+      "destructive_cmd": 0,
+      "reverse_shell": 2,
+      "inline_eval_exec": 102
+    },
+    "secret_totals": {
+      "github_token": 0,
+      "aws_access_key": 0,
+      "google_api_key": 0,
+      "slack_token": 0,
+      "private_key_block": 0
+    }
+  },
+  "files": [
+    {
+      "file": "ctf-ai-ml/adversarial-ml/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 6
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-ai-ml/llm-attacks/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "169.254.169.254",
+        "challenge:8080"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-ai-ml/model-attacks/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 4
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "challenge:8080"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-ai-ml/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 19,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "target:8080"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-crypto/advanced-math/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-crypto/classic-ciphers/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 1,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "quipqiup.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-crypto/ecc-attacks/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-crypto/exotic-crypto/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 1,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-crypto/exotic-crypto-2/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 1,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-crypto/historical/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-crypto/lattice-and-lwe/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-crypto/modern-ciphers/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 6,
+      "broken_relative_links": [
+        "mode\""
+      ],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "github.com",
+        "target"
+      ],
+      "notes": [
+        "Contains broken relative links."
+      ]
+    },
+    {
+      "file": "ctf-crypto/modern-ciphers-2/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 7,
+      "broken_relative_links": [
+        "modern-cipher\""
+      ],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "github.com"
+      ],
+      "notes": [
+        "Contains broken relative links."
+      ]
+    },
+    {
+      "file": "ctf-crypto/modern-ciphers-3/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-crypto/prng/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 3,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 1
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "target"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-crypto/prng-attacks/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-crypto/rsa-attacks/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 15,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-crypto/rsa-attacks-2/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "github.com",
+        "gitlab.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-crypto/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 103,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "github.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-crypto/stream-ciphers/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-crypto/zkp-and-advanced/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 2
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-forensics/3d-printing/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-forensics/disk-advanced/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-forensics/disk-and-memory/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-forensics/disk-recovery/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "github.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-forensics/linux-forensics/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "api.etherscan.io",
+        "github.com",
+        "target",
+        "target:8080"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-forensics/network/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 1,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "github.com",
+        "macvendors.com",
+        "target"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-forensics/network-advanced/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 4,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-forensics/peripheral-capture/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 3,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-forensics/signals-and-hardware/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "github.com",
+        "www.columbia.edu"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-forensics/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 117,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "mempool.space"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-forensics/steganography/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 3,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "www.spammimic.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-forensics/stego-advanced/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "github.com",
+        "jpinsoft.net"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-forensics/stego-advanced-2/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-forensics/stego-image/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 4,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "github.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-forensics/windows/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "schemas.microsoft.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-malware/c2-and-protocols/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "api.telegram.org"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-malware/pe-and-dotnet/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-malware/scripts-and-obfuscation/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 1,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 2,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "{domain}"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-malware/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 24,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "github.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-misc/bashjails/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-misc/ctfd-navigation/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "ctf.example.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-misc/dns/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "$ip",
+        "github.com",
+        "rbndr.us"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-misc/encodings/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 1,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "...`",
+        "vii5ard.github.io"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-misc/encodings-advanced/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "products.aspose.app",
+        "www.onlinebarcodereader.com",
+        "zxing.org"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-misc/games-and-vms/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 3,
+      "broken_relative_links": [
+        "\"cat"
+      ],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "assetdelivery.roblox.com",
+        "kubernetes.default.svc"
+      ],
+      "notes": [
+        "Contains broken relative links."
+      ]
+    },
+    {
+      "file": "ctf-misc/games-and-vms-2/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 1,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "target.example.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-misc/games-and-vms-3/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 3,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 2
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "localhost"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-misc/games-and-vms-4/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 6,
+      "broken_relative_links": [
+        "games-and-v\""
+      ],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 2
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "oeis.org",
+        "wry.me"
+      ],
+      "notes": [
+        "Contains broken relative links."
+      ]
+    },
+    {
+      "file": "ctf-misc/linux-privesc/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "127.0.0.1:8080",
+        "127.0.0.1:9191",
+        "localhost:9191",
+        "target:3128"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-misc/pyjails/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 37
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-misc/rf-sdr/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-misc/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 57,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 1
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "ctf.example.com",
+        "example.com",
+        "gtfobins.github.io",
+        "www.dcode.fr"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-osint/geolocation-and-media/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 3,
+      "broken_relative_links": [
+        "area.searchArea",
+        "area.a",
+        "{{bbox}}"
+      ],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "api.what3words.com",
+        "ip-api.com",
+        "ipinfo.io",
+        "maps.google.com",
+        "maps.googleapis.com",
+        "openinframap.org",
+        "overpass-turbo.eu",
+        "scoutlife.org",
+        "what3words.com",
+        "www.loc.gov",
+        "www.openrailwaymap.org"
+      ],
+      "notes": [
+        "Contains broken relative links."
+      ]
+    },
+    {
+      "file": "ctf-osint/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 29,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "ip-api.com",
+        "metrics.torproject.org",
+        "namechk.com",
+        "web.archive.org",
+        "whatsmyname.app",
+        "x.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-osint/social-media/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 1,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "64.media.tumblr.com",
+        "api.tumblr.com",
+        "bsky.social",
+        "develop.battle.net",
+        "discord.com",
+        "namechk.com",
+        "namemc.com",
+        "osint.industries",
+        "public.api.bsky.app",
+        "raider.io",
+        "syndication.twitter.com",
+        "username.tumblr.com",
+        "web.archive.org",
+        "whatsmyname.app",
+        "www.strava.com",
+        "www.wowprogress.com",
+        "x.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-osint/web-and-dns/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "api.securitytrails.com",
+        "bgp.tools",
+        "github.com",
+        "metrics.torproject.org",
+        "reverse-whois-api.whoisxmlapi.com",
+        "t.me",
+        "target",
+        "web.archive.org",
+        "www.fec.gov",
+        "www.google.com",
+        "www.shodan.io",
+        "x.x.x.x:5000,"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-pwn/advanced/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 4,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-pwn/advanced-exploits/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 4,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-pwn/advanced-exploits-2/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "attacker:5000"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-pwn/advanced-exploits-3/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 2
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-pwn/advanced-exploits-4/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 3,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-pwn/advanced-exploits-5/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 4,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-pwn/field-notes/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 67,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-pwn/format-string/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 1,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "libc.blukat.me",
+        "libc.rip",
+        "target"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-pwn/heap-fsop/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 1,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-pwn/heap-techniques/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 3,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-pwn/heap-techniques-2/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 5,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-pwn/kernel/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 3,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-pwn/kernel-bypass/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 5,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-pwn/kernel-techniques/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-pwn/overflow-basics/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 3,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-pwn/rop-advanced/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-pwn/rop-and-shellcode/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 1,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "github.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-pwn/sandbox-escape/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 5
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-pwn/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 44,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 1
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "github.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-reverse/anti-analysis/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-reverse/anti-analysis-ctf/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 1,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-reverse/field-notes/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 78,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "github.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-reverse/languages/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 1
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "bbchallenge.org",
+        "github.com",
+        "www.python.org"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-reverse/languages-compiled/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 1,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "github.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-reverse/languages-platforms/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 3,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "assetdelivery.roblox.com",
+        "github.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-reverse/patterns/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-reverse/patterns-ctf/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-reverse/patterns-ctf-2/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "htb{...}`"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-reverse/patterns-ctf-3/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-reverse/patterns-runtime/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 1,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-reverse/platforms/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 4,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "fmodel.app"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-reverse/platforms-hardware/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 1,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "ctf-reverse/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 19,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "github.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-reverse/tools/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 1,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "binary.ninja",
+        "dogbolt.org",
+        "github.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-reverse/tools-advanced/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 1,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "retdec.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-reverse/tools-advanced-2/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "gef.blah.cat",
+        "github.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-reverse/tools-dynamic/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 1,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 3
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "github.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-reverse/tools-emulation/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "github.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-web/auth-and-access/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 3,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "auth.target.com",
+        "evil.com",
+        "evil.com@target.com",
+        "suspicious-subdomain.target.com",
+        "target",
+        "target.com",
+        "target.com%00@evil.com",
+        "target.com.evil.com",
+        "target.com?@evil.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-web/auth-and-access-2/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 3,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "target"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-web/auth-infra/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 3,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "attacker.com",
+        "evil.com",
+        "host:8111",
+        "target.com",
+        "target.com%60.evil.com",
+        "target.com.evil.com",
+        "target:8080"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-web/auth-jwt/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "attacker.com",
+        "target"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-web/client-side/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 6
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "127.0.0.1",
+        "127.0.0.1:1337",
+        "attacker",
+        "attacker.com",
+        "attacker.tld",
+        "exfil.com",
+        "localhost:8888",
+        "target",
+        "target.tld",
+        "vulnerable.com",
+        "webhook.site",
+        "{{host}}"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-web/client-side-advanced/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 1,
+      "broken_relative_links": [
+        "document[\"cookie\"]"
+      ],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 1
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "1558071511",
+        "192.168.1.1",
+        "admin.example.invalid:8000",
+        "attacker",
+        "attacker.cloudfunctions.net",
+        "attacker.com",
+        "attacker.example",
+        "cdnjs.cloudflare.com",
+        "e\\uff58ample.com",
+        "example.com",
+        "portswigger.net",
+        "target",
+        "trusted.com",
+        "webhook.site",
+        "your-func-xxxxx.us-central1.run.app"
+      ],
+      "notes": [
+        "Contains broken relative links."
+      ]
+    },
+    {
+      "file": "ctf-web/cves/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 8,
+      "broken_relative_links": [
+        "auth-and-acc\""
+      ],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 1
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "127.0.0.1",
+        "127.0.0.1:9191",
+        "attacker.com",
+        "backend:4000",
+        "evil.com",
+        "exfil.com",
+        "target",
+        "target:3128",
+        "target:8080"
+      ],
+      "notes": [
+        "Contains broken relative links."
+      ]
+    },
+    {
+      "file": "ctf-web/field-notes/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 90,
+      "broken_relative_links": [
+        "'return"
+      ],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 1
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "127.0.0.1",
+        "attacker.com",
+        "lock.cmpxchg8b.com",
+        "target",
+        "target.onion",
+        "valid@attacker.com",
+        "x:x@127.0.0.1:80@allowed.host"
+      ],
+      "notes": [
+        "Contains broken relative links."
+      ]
+    },
+    {
+      "file": "ctf-web/node-and-prototype/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "target:3000"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-web/server-side/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 8,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "7f000001.external_ip.rbndr.us:5001",
+        "<host-header",
+        "attacker",
+        "ip8.8.8.8.aaaaaa...aaa.127.0.0.1.xip.io:1212",
+        "localhost",
+        "target",
+        "www.bing.com",
+        "www.google.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-web/server-side-2/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 3,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "schemas.openxmlformats.org",
+        "target",
+        "www.w3.org",
+        "your-server"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-web/server-side-advanced/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 4,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "127.0.0.1",
+        "target",
+        "webhook.site"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-web/server-side-advanced-2/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 1,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 2
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "attacker",
+        "attacker.com",
+        "attacker.com@ctf.example.com",
+        "java.sun.com",
+        "localhost:2375",
+        "localhost:9200",
+        "target",
+        "what:ever@127.0.0.1:80@allowed.host",
+        "www.w3.org",
+        "x:x@127.0.0.1:80@",
+        "{$attacker_ip}@ctf.ekoparty.org"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-web/server-side-advanced-3/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 4,
+      "broken_relative_links": [
+        "server-side-adv\""
+      ],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "127.0.0.1:5000",
+        "target"
+      ],
+      "notes": [
+        "Contains broken relative links."
+      ]
+    },
+    {
+      "file": "ctf-web/server-side-advanced-4/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 9,
+      "broken_relative_links": [
+        "'chi'+'ld_pro'+'cess'",
+        "'id'",
+        "'printf"
+      ],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "127.0.0.1%0d%0ahelo%20x%0d%0amail%20from%3a%3cattacker%40x.com%3e%0d%0arcpt%20to%3a%3croot%3e%0d%0adata%0d%0asubject%3a%20give%20me%20flag%0d%0aabc%0d%0a.%0d%0a:25",
+        "127.0.0.1:5000",
+        "127.0.0.1{encoded}:25",
+        "target",
+        "www.w3.org"
+      ],
+      "notes": [
+        "Contains broken relative links."
+      ]
+    },
+    {
+      "file": "ctf-web/server-side-deser/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 1,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "127.0.0.1",
+        "attacker.burpcollaborator.net",
+        "target"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-web/server-side-exec/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 6,
+      "broken_relative_links": [
+        "'return"
+      ],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 1,
+        "inline_eval_exec": 14
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "siunam321.github.io",
+        "target",
+        "webhook.site"
+      ],
+      "notes": [
+        "Contains broken relative links."
+      ]
+    },
+    {
+      "file": "ctf-web/server-side-exec-2/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 16,
+      "broken_relative_links": [
+        "$_GET[b]",
+        "['/bin/sh','-c','cat"
+      ],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 8
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "attacker.com",
+        "target"
+      ],
+      "notes": [
+        "Contains broken relative links."
+      ]
+    },
+    {
+      "file": "ctf-web/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 30,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "github.com",
+        "target.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-web/sql-injection/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "target",
+        "target.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-web/web3/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "ethereum-sepolia-rpc.publicnode.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "ctf-writeup/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [],
+      "notes": []
+    },
+    {
+      "file": "readme/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 2,
+      "broken_relative_links": [
+        "scripts/install_ctf_tools.sh",
+        "CONTRIBUTING.md"
+      ],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 2
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "agentskills.io",
+        "blog.hellofriday.ai",
+        "docs.anthropic.com",
+        "docs.hellofriday.ai",
+        "hellofriday.ai"
+      ],
+      "notes": [
+        "Contains broken relative links."
+      ]
+    },
+    {
+      "file": "security/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 0,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "github.com"
+      ],
+      "notes": []
+    },
+    {
+      "file": "solve-challenge/SKILL.md",
+      "has_frontmatter": true,
+      "has_name": true,
+      "has_description": true,
+      "has_procedimiento": true,
+      "has_contenido_base": true,
+      "relative_links_checked": 1,
+      "broken_relative_links": [],
+      "risk_hits": {
+        "remote_exec_pipe": 0,
+        "powershell_iex": 0,
+        "destructive_cmd": 0,
+        "reverse_shell": 0,
+        "inline_eval_exec": 0
+      },
+      "secret_hits": {
+        "github_token": 0,
+        "aws_access_key": 0,
+        "google_api_key": 0,
+        "slack_token": 0,
+        "private_key_block": 0
+      },
+      "external_hosts": [
+        "ctf.example.com",
+        "host:port"
+      ],
+      "notes": []
+    }
+  ]
+}

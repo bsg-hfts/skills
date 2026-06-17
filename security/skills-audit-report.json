@@ -1,0 +1,516 @@
+{
+  "skills_total": 120,
+  "issues_total": 137,
+  "issue_summary": {
+    "remote_exec_pipe": 0,
+    "powershell_iex": 3,
+    "destructive_rm": 0,
+    "credential_exfil": 54,
+    "reverse_shell": 2,
+    "suspicious_obfuscation": 132
+  },
+  "top_hosts": [
+    [
+      "target",
+      156
+    ],
+    [
+      "github.com",
+      38
+    ],
+    [
+      "attacker.com",
+      34
+    ],
+    [
+      "target.com",
+      18
+    ],
+    [
+      "webhook.site",
+      9
+    ],
+    [
+      "attacker",
+      8
+    ],
+    [
+      "127.0.0.1",
+      8
+    ],
+    [
+      "challenge:8080",
+      6
+    ],
+    [
+      "web.archive.org",
+      6
+    ],
+    [
+      "localhost:9200",
+      6
+    ],
+    [
+      "public.api.bsky.app",
+      5
+    ],
+    [
+      "host:8111",
+      5
+    ],
+    [
+      "target:8080",
+      4
+    ],
+    [
+      "ctf.example.com",
+      4
+    ],
+    [
+      "target:3128",
+      4
+    ],
+    [
+      "evil.com",
+      4
+    ],
+    [
+      "api.telegram.org",
+      3
+    ],
+    [
+      "whatsmyname.app",
+      3
+    ],
+    [
+      "discord.com",
+      3
+    ],
+    [
+      "target.com.evil.com",
+      3
+    ],
+    [
+      "exfil.com",
+      3
+    ],
+    [
+      "www.w3.org",
+      3
+    ],
+    [
+      "127.0.0.1:5000",
+      3
+    ],
+    [
+      "hellofriday.ai",
+      3
+    ],
+    [
+      "quipqiup.com",
+      2
+    ]
+  ],
+  "sample_issues": [
+    {
+      "file": "ctf-ai-ml\\adversarial-ml\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": " models.resnet18(pretrained=True) model.eval()  img = Image.open(\"input.png\").convert(\"RGB\") preprocess = transforms.Compose("
+    },
+    {
+      "file": "ctf-ai-ml\\adversarial-ml\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "tach()      return x_adv  # Usage model.eval() x_adv = pgd_attack(model, x, torch.tensor([original_class])) # or for targeted"
+    },
+    {
+      "file": "ctf-ai-ml\\adversarial-ml\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": " models.resnet50(pretrained=True) model.eval()  # Patch parameters patch_size = 50  # pixels target_class = 954  # e.g., \"ban"
+    },
+    {
+      "file": "ctf-ai-ml\\adversarial-ml\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "rigger activates backdoor.\"\"\"     model.eval()     with torch.no_grad():         clean_pred = model(clean_image.unsqueeze(0))"
+    },
+    {
+      "file": "ctf-ai-ml\\adversarial-ml\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "rs indicate backdoor.     \"\"\"     model.eval()     results = {}      for target_class in range(num_classes):         # Optimi"
+    },
+    {
+      "file": "ctf-ai-ml\\adversarial-ml\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "))      # Collect activations     model.eval()     class_activations = {c: [] for c in range(num_classes)}     with torch.no_"
+    },
+    {
+      "file": "ctf-ai-ml\\model-attacks\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "ge_model.pt\", map_location=\"cpu\") model.eval()  # Target: the output we want to invert (e.g., a specific embedding or class) "
+    },
+    {
+      "file": "ctf-ai-ml\\model-attacks\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "malization, set it to eval mode (`model.eval()`) to use running statistics rather than batch statistics.  **Variations:** - *"
+    },
+    {
+      "file": "ctf-ai-ml\\model-attacks\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "ncoder.pt\", map_location=\"cpu\") encoder.eval()  # Initialize two random inputs input_a = torch.randn(1, 3, 64, 64, requires_g"
+    },
+    {
+      "file": "ctf-ai-ml\\model-attacks\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "et_model.pt\", map_location=\"cpu\") model.eval()  def get_prediction_metrics(model, x, true_label):     \"\"\"Compute metrics that"
+    },
+    {
+      "file": "ctf-crypto\\prng\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "zip.GzipFile(\"magic_data\", \"r\") magic = eval(f.read()) f.close()  def rebuild_from_floats(floats):     \"\"\"Convert float obser"
+    },
+    {
+      "file": "ctf-crypto\\zkp-and-advanced\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": " model = solver.model()     print(model.eval(x)) ```  **BPF/SECCOMP filter solving:**  When challenges use BPF bytecode for f"
+    },
+    {
+      "file": "ctf-crypto\\zkp-and-advanced\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "()     flag_bits = ''.join('1' if model.eval(b) else '0' for b in bits)     print(long_to_bytes(int(flag_bits, 2))) ```  **Wh"
+    },
+    {
+      "file": "ctf-forensics\\disk-recovery\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "to binary  ```bash echo \"deadbeef...\" | xxd -r -p > master.key ```  4. **Add new LUKS passphrase using master key:**  ```bash "
+    },
+    {
+      "file": "ctf-forensics\\disk-recovery\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "ewhdr.bin printf '%s' \"$STREAM_FLAGS\" | xxd -r -p >> newhdr.bin printf '%s' \"$CRC\"          | xxd -r -p >> newhdr.bin dd if=ne"
+    },
+    {
+      "file": "ctf-forensics\\disk-recovery\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "ewhdr.bin printf '%s' \"$CRC\"          | xxd -r -p >> newhdr.bin dd if=newhdr.bin of=broken.xz bs=1 count=12 conv=notrunc  # 5."
+    },
+    {
+      "file": "ctf-forensics\\disk-recovery\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "MGxZdEByX0QwX3kwdV9HM3RfSXRfTjB3P30K' | base64 -d ```  **Key insight:** When `grep flag` on the outermost file fails, assume each"
+    },
+    {
+      "file": "ctf-forensics\\linux-forensics\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "ncodings  ```bash echo \"base64string\" | base64 -d echo \"hexstring\" | xxd -r -p # ROT13: tr 'A-Za-z' 'N-ZA-Mn-za-m' ```  ---  ## G"
+    },
+    {
+      "file": "ctf-forensics\\linux-forensics\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "4string\" | base64 -d echo \"hexstring\" | xxd -r -p # ROT13: tr 'A-Za-z' 'N-ZA-Mn-za-m' ```  ---  ## Git Directory Recovery (UTC"
+    },
+    {
+      "file": "ctf-forensics\\linux-forensics\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": " and decode nc -lvnp 4444 > kdbx.b64 && base64 -d kdbx.b64 > system.kdbx ```  **Cracking KeePass v4 databases:** ```bash # Standa"
+    },
+    {
+      "file": "ctf-forensics\\network\\SKILL.md",
+      "type": "credential_exfil",
+      "detail": "t export SSLKEYLOGFILE=/tmp/sslkeys.log curl https://target/secret  # Import into Wireshark: # Edit → Preferences → Protocols → TLS → (Pre)-Master"
+    },
+    {
+      "file": "ctf-forensics\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "ncodings  ```bash echo \"base64string\" | base64 -d echo \"hexstring\" | xxd -r -p # ROT13: tr 'A-Za-z' 'N-ZA-Mn-za-m' ```  **ROT18:*"
+    },
+    {
+      "file": "ctf-forensics\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "4string\" | base64 -d echo \"hexstring\" | xxd -r -p # ROT13: tr 'A-Za-z' 'N-ZA-Mn-za-m' ```  **ROT18:** ROT13 on letters + ROT5 "
+    },
+    {
+      "file": "ctf-forensics\\stego-advanced-2\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": ",raw,0\" | \\   tail -n +7 | tr -d '\\n' | xxd -r -p > stream.bin  # Render ANSI escape codes (simplest approach) more stream.bin"
+    },
+    {
+      "file": "ctf-forensics\\stego-advanced-2\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "ark -r capture.pcap -T fields -e data | xxd -r -p | more ```  ANSI escape patterns to recognize: - `\\x1b[<n>m` — color/attribu"
+    },
+    {
+      "file": "ctf-forensics\\windows\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "56330... echo \"4B4354467B72656330...\" | xxd -r -p ```  ---  ## Browser History  **Edge/Chrome (SQLite):** ```python import sql"
+    },
+    {
+      "file": "ctf-malware\\c2-and-protocols\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "response\" -T fields -e http.file_data | xxd -r -p > payload.bin # Then analyze with dissect.cobaltstrike or CobaltStrikeParser"
+    },
+    {
+      "file": "ctf-malware\\scripts-and-obfuscation\\SKILL.md",
+      "type": "powershell_iex",
+      "detail": "-EncodedCommand  # Base64 encoded IEX / Invoke-Expression # Eval equivalent [System.Text.Encoding]::Unicode.GetString([System.Convert]::F"
+    },
+    {
+      "file": "ctf-malware\\scripts-and-obfuscation\\SKILL.md",
+      "type": "powershell_iex",
+      "detail": "g]::Unicode.GetString([System.Convert]::FromBase64String($encoded)) ```  ## Junk Code Detection  **Pattern:** Obfuscation adds meaningle"
+    },
+    {
+      "file": "ctf-malware\\scripts-and-obfuscation\\SKILL.md",
+      "type": "powershell_iex",
+      "detail": "s1 = \"cmd.exe /c\" nocase         $s2 = \"powershell -enc\" nocase         $s3 = {4D 5A 90 00}  // MZ header (hex pattern)         $s4 ="
+    },
+    {
+      "file": "ctf-misc\\ctfd-navigation\\SKILL.md",
+      "type": "credential_exfil",
+      "detail": "n via API (requires session auth first) curl -s -X POST \"$CTF_URL/api/v1/tokens\" \\   -H \"Content-Type: application/json\" \\   -b cookies.txt \\   -d '{\"expirati"
+    },
+    {
+      "file": "ctf-misc\\ctfd-navigation\\SKILL.md",
+      "type": "credential_exfil",
+      "detail": "xxxxxxxxxxxxxxx\"  # Test authentication curl -s -H \"Authorization: Token $CTF_TOKEN\" \"$CTF_URL/api/v1/users/me\" | jq . ```  ### Method 2: Session Login (Cookie-Bas"
+    },
+    {
+      "file": "ctf-misc\\ctfd-navigation\\SKILL.md",
+      "type": "credential_exfil",
+      "detail": "enges  ```bash # All visible challenges curl -s -H \"Authorization: Token $CTF_TOKEN\" \"$CTF_URL/api/v1/challenges\" | jq .  # Filter by category curl -s -H \"Authoriz"
+    },
+    {
+      "file": "ctf-misc\\ctfd-navigation\\SKILL.md",
+      "type": "credential_exfil",
+      "detail": "hallenges\" | jq .  # Filter by category curl -s -H \"Authorization: Token $CTF_TOKEN\" \"$CTF_URL/api/v1/challenges?category=web\" | jq .  # Compact listing: id, name,"
+    },
+    {
+      "file": "ctf-misc\\ctfd-navigation\\SKILL.md",
+      "type": "credential_exfil",
+      "detail": "ting: id, name, category, value, solves curl -s -H \"Authorization: Token $CTF_TOKEN\" \"$CTF_URL/api/v1/challenges\" | \\   jq -r '.data[] | \"\\(.id)\\t\\(.value)pts\\t\\(."
+    },
+    {
+      "file": "ctf-misc\\ctfd-navigation\\SKILL.md",
+      "type": "credential_exfil",
+      "detail": "tails (description, files, hints, tags) curl -s -H \"Authorization: Token $CTF_TOKEN\" \"$CTF_URL/api/v1/challenges/$CHALL_ID\" | jq .  # Extract just the description "
+    },
+    {
+      "file": "ctf-misc\\ctfd-navigation\\SKILL.md",
+      "type": "credential_exfil",
+      "detail": "  # Extract just the description (HTML) curl -s -H \"Authorization: Token $CTF_TOKEN\" \"$CTF_URL/api/v1/challenges/$CHALL_ID\" | \\   jq -r '.data.description'  # Stri"
+    },
+    {
+      "file": "ctf-misc\\ctfd-navigation\\SKILL.md",
+      "type": "credential_exfil",
+      "detail": "trip HTML tags for readable description curl -s -H \"Authorization: Token $CTF_TOKEN\" \"$CTF_URL/api/v1/challenges/$CHALL_ID\" | \\   jq -r '.data.description' | sed '"
+    },
+    {
+      "file": "ctf-misc\\ctfd-navigation\\SKILL.md",
+      "type": "credential_exfil",
+      "detail": "/g'  # List files attached to challenge curl -s -H \"Authorization: Token $CTF_TOKEN\" \"$CTF_URL/api/v1/challenges/$CHALL_ID\" | \\   jq -r '.data.files[]'  # Get conn"
+    },
+    {
+      "file": "ctf-misc\\ctfd-navigation\\SKILL.md",
+      "type": "credential_exfil",
+      "detail": "ection info (if present in description) curl -s -H \"Authorization: Token $CTF_TOKEN\" \"$CTF_URL/api/v1/challenges/$CHALL_ID\" | \\   jq -r '.data.description' | grep "
+    },
+    {
+      "file": "ctf-misc\\encodings\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "gs  ### Base64 ```bash echo \"encoded\" | base64 -d # Charset: A-Za-z0-9+/= ```  ### Base32 ```bash echo \"OBUWG32DKRDHWMLUL53TI43OG"
+    },
+    {
+      "file": "ctf-misc\\encodings\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "``  ### Hex ```bash echo \"68656c6c6f\" | xxd -r -p ```  ### IEEE 754 Floating Point Encoding  Numbers that encode ASCII text wh"
+    },
+    {
+      "file": "ctf-misc\\encodings\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "ames are base64-encoded indices. Check `base64 -d` on folder names when they look like random strings.  ---  ## Multi-Stage URL E"
+    },
+    {
+      "file": "ctf-misc\\encodings\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": " → Malbolge source echo \"piet_output\" | base64 -d > program.mal malbolge program.mal        # Or use online interpreter ```  Comm"
+    },
+    {
+      "file": "ctf-misc\\games-and-vms\\SKILL.md",
+      "type": "credential_exfil",
+      "detail": "ets/kubernetes.io/serviceaccount/token) curl -k -H \"Authorization: Bearer $TOKEN\" \\   https://kubernetes.default.svc/api/v1/namespaces/hidden/secrets/flag ```  "
+    },
+    {
+      "file": "ctf-misc\\games-and-vms-3\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "on pattern: # func = types.FunctionType(marshal.loads(base64.b64decode(data)), globals()) # func(client_socket) ```  **Key insight:**"
+    },
+    {
+      "file": "ctf-misc\\games-and-vms-3\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "c(client_socket) ```  **Key insight:** `marshal.loads()` is as dangerous as `pickle.loads()` — it deserializes arbitrary Python code "
+    },
+    {
+      "file": "ctf-misc\\games-and-vms-4\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "n confusions (`x`→`*`, `{`→`(`) before `eval()`.  ```python from selenium import webdriver from PIL import Image import pytes"
+    },
+    {
+      "file": "ctf-misc\\games-and-vms-4\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "t.getElementsByName('answer')[0].value={eval(expr)}\") d.find_element_by_tag_name('form').submit() ```  **Key insight:** Dynam"
+    },
+    {
+      "file": "ctf-misc\\pyjails\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "ecomposition-bearcatctf-2026) - [Python eval() Jail Escape via Tuple Injection (Codegate 2018)](#python-eval-jail-escape-via-"
+    },
+    {
+      "file": "ctf-misc\\pyjails\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "ose'> ```  ### Compile Bypass ```python exec(compile('__import__(\"os\").system(\"sh\")', '', 'exec')) ```  ### Unicode Bypass ``"
+    },
+    {
+      "file": "ctf-misc\\pyjails\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "__.__name__ == \"__builtins__\"     0 def exec():           # exec.__name__ == \"exec\"     0 ``` Use as dict subscript: `some_di"
+    },
+    {
+      "file": "ctf-misc\\pyjails\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "es it by running in a subprocess, then `exec()`s it in the main process with different globals.  **Exploit:** Build a dual-pu"
+    },
+    {
+      "file": "ctf-misc\\pyjails\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": " globals()else 0 ```  **Key insight:** `exec()` in the server process inherits the server's globals (imported modules like `s"
+    },
+    {
+      "file": "ctf-misc\\pyjails\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "ur entire expression. Server evaluates `eval(long_to_bytes(eval(expr)))` — the outer eval runs the decoded Python code.  **St"
+    },
+    {
+      "file": "ctf-misc\\pyjails\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "n. Server evaluates `eval(long_to_bytes(eval(expr)))` — the outer eval runs the decoded Python code.  **Strategy:** Choose `1"
+    },
+    {
+      "file": "ctf-misc\\pyjails\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "bytes_to_long  target = bytes_to_long(b'eval(input())')  # → 13-byte integer  def repunit(k):     return (10**k - 1) // 9  # "
+    },
+    {
+      "file": "ctf-misc\\pyjails\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "tly 2 characters. Double-eval pattern (`eval(decode(eval(...)))`).  ---  ## Python eval() Jail Escape via Tuple Injection (Co"
+    },
+    {
+      "file": "ctf-misc\\pyjails\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "ters. Double-eval pattern (`eval(decode(eval(...)))`).  ---  ## Python eval() Jail Escape via Tuple Injection (Codegate 2018)"
+    },
+    {
+      "file": "ctf-misc\\SKILL.md",
+      "type": "credential_exfil",
+      "detail": " Navigation (No Browser)  Detect CTFd (`curl -s \"$CTF_URL/api/v1/\" | head -5`) and interact via API. **Ask the user for their API token** (CTFd Settings > Access Tokens) — it is not provided by default. Then use `Authori"
+    },
+    {
+      "file": "ctf-misc\\SKILL.md",
+      "type": "credential_exfil",
+      "detail": "e.com\" CTF_TOKEN=\"ctfd_your_token_here\" curl -s -H \"Authorization: Token $CTF_TOKEN\" \"$CTF_URL/api/v1/challenges\" | jq -r '.data[] | \"\\(.id)\\t\\(.value)pts\\t\\(.cate"
+    },
+    {
+      "file": "ctf-misc\\SKILL.md",
+      "type": "credential_exfil",
+      "detail": "t\\(.value)pts\\t\\(.category)\\t\\(.name)\"' curl -s -X POST -H \"Authorization: Token $CTF_TOKEN\" -H \"Content-Type: application/json\" \"$CTF_URL/api/v1/challenges/attempt\" -d \"{"
+    },
+    {
+      "file": "ctf-misc\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "4.b64decode('<data>'))\" echo '<data>' | base64 -d echo '<hex>' | xxd -r -p  # QR code zbarimg qr.png python3 -c \"from pyzbar.pyzb"
+    },
+    {
+      "file": "ctf-misc\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "cho '<data>' | base64 -d echo '<hex>' | xxd -r -p  # QR code zbarimg qr.png python3 -c \"from pyzbar.pyzbar import decode; from"
+    },
+    {
+      "file": "ctf-misc\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "ings  ```bash # Base64 echo \"encoded\" | base64 -d  # Base32 (A-Z2-7=) echo \"OBUWG32D...\" | base32 -d  # Hex echo \"68656c6c6f\" | x"
+    },
+    {
+      "file": "ctf-misc\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": " | base32 -d  # Hex echo \"68656c6c6f\" | xxd -r -p  # ROT13 echo \"uryyb\" | tr 'a-zA-Z' 'n-za-mN-ZA-M' ```  **Identify by charse"
+    },
+    {
+      "file": "ctf-misc\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "load as config value, create key named `eval(stored_key)` — f-string rendering evaluates the key name expression, triggering "
+    },
+    {
+      "file": "ctf-misc\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "TFObins # xxd with SUID: xxd flag.txt | xxd -r # vim with SUID: vim -c ':!cat /flag.txt' ```  **Reference:** https://gtfobins."
+    },
+    {
+      "file": "ctf-osint\\social-media\\SKILL.md",
+      "type": "credential_exfil",
+      "detail": "r token TOKEN=\"your_token\" # List roles curl -H \"Authorization: $TOKEN\" \"https://discord.com/api/v10/guilds/GUILD_ID/roles\" # List emojis curl -H \"Aut"
+    },
+    {
+      "file": "ctf-osint\\social-media\\SKILL.md",
+      "type": "credential_exfil",
+      "detail": "10/guilds/GUILD_ID/roles\" # List emojis curl -H \"Authorization: $TOKEN\" \"https://discord.com/api/v10/guilds/GUILD_ID/emojis\" # Search messages curl -H"
+    },
+    {
+      "file": "ctf-osint\\social-media\\SKILL.md",
+      "type": "credential_exfil",
+      "detail": "ilds/GUILD_ID/emojis\" # Search messages curl -H \"Authorization: $TOKEN\" \"https://discord.com/api/v10/guilds/GUILD_ID/messages/search?content=flag\" ```"
+    },
+    {
+      "file": "ctf-pwn\\advanced-exploits-3\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "tion spawns a child process via `fork()+exec()`, and the child inherits all open file descriptors that lack the `O_CLOEXEC` f"
+    },
+    {
+      "file": "ctf-pwn\\advanced-exploits-3\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": " descriptors inheritable across `fork()+exec()`. Any service that reads secrets into FDs and then spawns child processes is v"
+    },
+    {
+      "file": "ctf-pwn\\kernel-bypass\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "  # 4. On target: decode and decompress base64 -d exploit.b64 | gunzip > /tmp/exploit && chmod +x /tmp/exploit  # Optional: UPX c"
+    },
+    {
+      "file": "ctf-pwn\\sandbox-escape\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "tom CPU emulator's print function uses `eval('\"' + string_buffer + '\"')` to process escape sequences in the output. Build a s"
+    },
+    {
+      "file": "ctf-pwn\\sandbox-escape\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": " from emulator memory and passes it to `eval('\"' + s + '\"')` to handle escape sequences like `\\n`, `\\t` 3. Use ADD opcodes to"
+    },
+    {
+      "file": "ctf-pwn\\sandbox-escape\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "uild_char(c)  # Trigger PRINT opcode -> eval('\"' + injection + '\"') # eval becomes: eval('\"\"+__import__(\"os\").system(\"cat /fl"
+    },
+    {
+      "file": "ctf-pwn\\sandbox-escape\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "('\"' + injection + '\"') # eval becomes: eval('\"\"+__import__(\"os\").system(\"cat /flag\")#\"') # The # comments out the trailing q"
+    },
+    {
+      "file": "ctf-pwn\\sandbox-escape\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "* When an emulator or interpreter uses `eval()` to process string output (e.g., for escape sequences), inject a quote to clos"
+    },
+    {
+      "file": "ctf-pwn\\SKILL.md",
+      "type": "suspicious_obfuscation",
+      "detail": "* When an emulator's print opcode uses `eval('\"' + buf + '\"')` for escape sequences, build `\"+__import__(\"os\").system(\"cmd\")#"
+    }
+  ]
+}

@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CTF Skills Index</title>
+  <style>
+    :root {
+      --bg: #f7f7f2;
+      --panel: #ffffff;
+      --ink: #1c1f2a;
+      --muted: #4f5565;
+      --accent: #0e8a6a;
+      --border: #dde2eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "IBM Plex Sans", "Trebuchet MS", sans-serif;
+      color: var(--ink);
+      background: radial-gradient(circle at 20% 10%, #fff7d8 0%, var(--bg) 40%), linear-gradient(160deg, #f7f7f2, #eef3f8);
+    }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 24px; }
+    header {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      position: sticky;
+      top: 12px;
+      z-index: 10;
+      box-shadow: 0 8px 30px rgba(0,0,0,.06);
+    }
+    h1 { margin: 0 0 8px 0; font-size: 1.6rem; letter-spacing: .2px; }
+    .sub { margin: 0 0 16px 0; color: var(--muted); }
+    .controls { display: grid; grid-template-columns: 1fr auto; gap: 10px; }
+    input[type="search"] {
+      width: 100%; padding: 12px 14px; border: 1px solid var(--border); border-radius: 10px;
+      font-size: 1rem; outline: none;
+    }
+    input[type="search"]:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(14,138,106,.15); }
+    .counter { align-self: center; color: var(--muted); font-size: .95rem; }
+    .nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .pill {
+      text-decoration: none; color: var(--ink); border: 1px solid var(--border); background: #fff;
+      border-radius: 999px; padding: 6px 10px; font-size: .88rem;
+    }
+    .pill span { color: var(--accent); font-weight: 600; }
+    .group-section { margin-top: 26px; }
+    h2 { font-size: 1.2rem; margin: 0 0 14px 0; display: flex; gap: 10px; align-items: baseline; }
+    h2 span { font-size: .9rem; color: var(--muted); font-weight: 500; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+    .card {
+      background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 14px;
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,.06); }
+    .card h3 { margin: 0 0 8px 0; font-size: 1rem; }
+    .card h3 a { color: var(--accent); text-decoration: none; }
+    .card h3 a:hover { text-decoration: underline; }
+    .card p { margin: 0; color: var(--muted); font-size: .92rem; line-height: 1.38; }
+    .meta { margin-top: 10px; font-family: Consolas, monospace; font-size: .76rem; color: #6a7387; word-break: break-all; }
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>CTF Skills Index</h1>
+      <p class="sub">Navegación rápida de skills con descripción básica. Total: <strong>120</strong></p>
+      <div class="controls">
+        <input id="q" type="search" placeholder="Buscar por nombre, descripción o categoría..." />
+        <div id="count" class="counter">Mostrando 120 skills</div>
+      </div>
+      <nav class="nav"><a href="#grp-ctf-ai-ml" class="pill">ctf-ai-ml <span>4</span></a><a href="#grp-ctf-crypto" class="pill">ctf-crypto <span>17</span></a><a href="#grp-ctf-forensics" class="pill">ctf-forensics <span>15</span></a><a href="#grp-ctf-malware" class="pill">ctf-malware <span>4</span></a><a href="#grp-ctf-misc" class="pill">ctf-misc <span>13</span></a><a href="#grp-ctf-osint" class="pill">ctf-osint <span>4</span></a><a href="#grp-ctf-pwn" class="pill">ctf-pwn <span>19</span></a><a href="#grp-ctf-reverse" class="pill">ctf-reverse <span>19</span></a><a href="#grp-ctf-web" class="pill">ctf-web <span>21</span></a><a href="#grp-ctf-writeup" class="pill">ctf-writeup <span>1</span></a><a href="#grp-readme" class="pill">readme <span>1</span></a><a href="#grp-security" class="pill">security <span>1</span></a><a href="#grp-solve-challenge" class="pill">solve-challenge <span>1</span></a></nav>
+    </header>
+    <section id="grp-ctf-ai-ml" class="group-section">
+  <h2>ctf-ai-ml <span>4 skills</span></h2>
+  <div class="grid"><article class="card" data-name="adversarial-ml" data-desc="adversarial machine learning techniques: generating adversarial examples, physical-world patches, evasion attacks, data poisoning, and backdoor detection. for model weight manipulation and extraction" data-group="ctf-ai-ml">
+  <h3><a href="ctf-ai-ml/adversarial-ml/SKILL.md">adversarial-ml</a></h3>
+  <p>Adversarial machine learning techniques: generating adversarial examples, physical-world patches, evasion attacks, data poisoning, and backdoor detection. For model weight manipulation and extraction</p>
+  <div class="meta">ctf-ai-ml/adversarial-ml/SKILL.md</div>
+</article>
+<article class="card" data-name="ctf-ai-ml" data-desc="provides ai and machine learning techniques for ctf challenges. use when attacking ml models, crafting adversarial examples, performing model extraction, prompt injection, membership inference, training data poisoning, fine-tuning manipulation, neural network analysis, lora adapter exploitation, llm jailbreaking, or solving ai-related puzzles." data-group="ctf-ai-ml">
+  <h3><a href="ctf-ai-ml/SKILL.md">ctf-ai-ml</a></h3>
+  <p>Provides AI and machine learning techniques for CTF challenges. Use when attacking ML models, crafting adversarial examples, performing model extraction, prompt injection, membership inference, training data poisoning, fine-tuning manipulation, neural network analysis, LoRA adapter exploitation, LLM jailbreaking, or solving AI-related puzzles.</p>
+  <div class="meta">ctf-ai-ml/SKILL.md</div>
+</article>
+<article class="card" data-name="llm-attacks" data-desc="llm-specific attack techniques: prompt injection, jailbreaking, token smuggling, context window manipulation, and tool use exploitation. for model weight attacks and extraction, see [model-attacks.md]" data-group="ctf-ai-ml">
+  <h3><a href="ctf-ai-ml/llm-attacks/SKILL.md">llm-attacks</a></h3>
+  <p>LLM-specific attack techniques: prompt injection, jailbreaking, token smuggling, context window manipulation, and tool use exploitation. For model weight attacks and extraction, see [model-attacks.md]</p>
+  <div class="meta">ctf-ai-ml/llm-attacks/SKILL.md</div>
+</article>
+<article class="card" data-name="model-attacks" data-desc="techniques for attacking ml models directly: weight manipulation, model inversion, encoder collision, lora adapter exploitation, model extraction, and membership inference. for adversarial example gen" data-group="ctf-ai-ml">
+  <h3><a href="ctf-ai-ml/model-attacks/SKILL.md">model-attacks</a></h3>
+  <p>Techniques for attacking ML models directly: weight manipulation, model inversion, encoder collision, LoRA adapter exploitation, model extraction, and membership inference. For adversarial example gen</p>
+  <div class="meta">ctf-ai-ml/model-attacks/SKILL.md</div>
+</article></div>
+</section><section id="grp-ctf-crypto" class="group-section">
+  <h2>ctf-crypto <span>17 skills</span></h2>
+  <div class="grid"><article class="card" data-name="advanced-math" data-desc="- [elliptic curve isogenies](#elliptic-curve-isogenies)" data-group="ctf-crypto">
+  <h3><a href="ctf-crypto/advanced-math/SKILL.md">advanced-math</a></h3>
+  <p>- [Elliptic Curve Isogenies](#elliptic-curve-isogenies)</p>
+  <div class="meta">ctf-crypto/advanced-math/SKILL.md</div>
+</article>
+<article class="card" data-name="classic-ciphers" data-desc="- [vigenere cipher](#vigenere-cipher)" data-group="ctf-crypto">
+  <h3><a href="ctf-crypto/classic-ciphers/SKILL.md">classic-ciphers</a></h3>
+  <p>- [Vigenere Cipher](#vigenere-cipher)</p>
+  <div class="meta">ctf-crypto/classic-ciphers/SKILL.md</div>
+</article>
+<article class="card" data-name="ctf-crypto" data-desc="provides cryptography attack techniques for ctf challenges. use when attacking encryption, hashing, signatures, zkp, prng, or mathematical crypto problems involving rsa, aes, ecc, lattices, lwe, cvp, number theory, coppersmith, pollard, wiener, padding oracle, gcm, key derivation, or stream/block cipher weaknesses." data-group="ctf-crypto">
+  <h3><a href="ctf-crypto/SKILL.md">ctf-crypto</a></h3>
+  <p>Provides cryptography attack techniques for CTF challenges. Use when attacking encryption, hashing, signatures, ZKP, PRNG, or mathematical crypto problems involving RSA, AES, ECC, lattices, LWE, CVP, number theory, Coppersmith, Pollard, Wiener, padding oracle, GCM, key derivation, or stream/block cipher weaknesses.</p>
+  <div class="meta">ctf-crypto/SKILL.md</div>
+</article>
+<article class="card" data-name="ecc-attacks" data-desc="- [small subgroup attacks](#small-subgroup-attacks)" data-group="ctf-crypto">
+  <h3><a href="ctf-crypto/ecc-attacks/SKILL.md">ecc-attacks</a></h3>
+  <p>- [Small Subgroup Attacks](#small-subgroup-attacks)</p>
+  <div class="meta">ctf-crypto/ecc-attacks/SKILL.md</div>
+</article>
+<article class="card" data-name="exotic-crypto" data-desc="- [braid group dh — alexander polynomial multiplicativity (dicectf 2026)](#braid-group-dh--alexander-polynomial-multiplicativity-dicectf-2026)" data-group="ctf-crypto">
+  <h3><a href="ctf-crypto/exotic-crypto/SKILL.md">exotic-crypto</a></h3>
+  <p>- [Braid Group DH — Alexander Polynomial Multiplicativity (DiceCTF 2026)](#braid-group-dh--alexander-polynomial-multiplicativity-dicectf-2026)</p>
+  <div class="meta">ctf-crypto/exotic-crypto/SKILL.md</div>
+</article>
+<article class="card" data-name="exotic-crypto-2" data-desc="covers 2017+ era exotic crypto attacks (bb-84 qkd, elgamal variants, paillier oracles, differential privacy, homomorphic bit extraction, jordan normal form, oss forgery, cayley-purser, bip39 brute, as" data-group="ctf-crypto">
+  <h3><a href="ctf-crypto/exotic-crypto-2/SKILL.md">exotic-crypto-2</a></h3>
+  <p>Covers 2017+ era exotic crypto attacks (BB-84 QKD, ElGamal variants, Paillier oracles, differential privacy, homomorphic bit extraction, Jordan normal form, OSS forgery, Cayley-Purser, BIP39 brute, As</p>
+  <div class="meta">ctf-crypto/exotic-crypto-2/SKILL.md</div>
+</article>
+<article class="card" data-name="historical" data-desc="- [lorenz sz40/42 (tunny) cipher](#lorenz-sz4042-tunny-cipher)" data-group="ctf-crypto">
+  <h3><a href="ctf-crypto/historical/SKILL.md">historical</a></h3>
+  <p>- [Lorenz SZ40/42 (Tunny) Cipher](#lorenz-sz4042-tunny-cipher)</p>
+  <div class="meta">ctf-crypto/historical/SKILL.md</div>
+</article>
+<article class="card" data-name="lattice-and-lwe" data-desc="- [quick triage: is this a lattice problem?](#quick-triage-is-this-a-lattice-problem)" data-group="ctf-crypto">
+  <h3><a href="ctf-crypto/lattice-and-lwe/SKILL.md">lattice-and-lwe</a></h3>
+  <p>- [Quick Triage: Is This a Lattice Problem?](#quick-triage-is-this-a-lattice-problem)</p>
+  <div class="meta">ctf-crypto/lattice-and-lwe/SKILL.md</div>
+</article>
+<article class="card" data-name="modern-ciphers" data-desc="block cipher attacks, mac forgery, padding oracles, and authenticated encryption. for hash/signature attacks (hash extension, pbkdf2, md5 collision, rabin, ecb oracles), see [modern-ciphers-2.md](mode" data-group="ctf-crypto">
+  <h3><a href="ctf-crypto/modern-ciphers/SKILL.md">modern-ciphers</a></h3>
+  <p>Block cipher attacks, MAC forgery, padding oracles, and authenticated encryption. For hash/signature attacks (hash extension, PBKDF2, MD5 collision, Rabin, ECB oracles), see [modern-ciphers-2.md](mode</p>
+  <div class="meta">ctf-crypto/modern-ciphers/SKILL.md</div>
+</article>
+<article class="card" data-name="modern-ciphers-2" data-desc="hash-based attacks, protocol-level exploits, ecb oracles, rabin/rsa parity attacks, and specialized cipher weaknesses. for core aes/cbc/padding oracle techniques, see [modern-ciphers.md](modern-cipher" data-group="ctf-crypto">
+  <h3><a href="ctf-crypto/modern-ciphers-2/SKILL.md">modern-ciphers-2</a></h3>
+  <p>Hash-based attacks, protocol-level exploits, ECB oracles, Rabin/RSA parity attacks, and specialized cipher weaknesses. For core AES/CBC/padding oracle techniques, see [modern-ciphers.md](modern-cipher</p>
+  <div class="meta">ctf-crypto/modern-ciphers-2/SKILL.md</div>
+</article>
+<article class="card" data-name="modern-ciphers-3" data-desc="custom hash reversal, crc brute-force, noisy rsa oracles, sponge collisions, cbc/padding oracle tricks, spn recovery, aes-cfb, three-round xor, unicode side channels, sha-256 basis attacks, mac forger" data-group="ctf-crypto">
+  <h3><a href="ctf-crypto/modern-ciphers-3/SKILL.md">modern-ciphers-3</a></h3>
+  <p>Custom hash reversal, CRC brute-force, noisy RSA oracles, sponge collisions, CBC/padding oracle tricks, SPN recovery, AES-CFB, three-round XOR, Unicode side channels, SHA-256 basis attacks, MAC forger</p>
+  <div class="meta">ctf-crypto/modern-ciphers-3/SKILL.md</div>
+</article>
+<article class="card" data-name="prng" data-desc="foundational prng state/seed recovery techniques. for ctf-era advanced attacks (mt19937 constraint propagation, rule 86 cellular automaton, java lcg mitm, lfsr bit-fold, z3 timing oracle, randcrack ds" data-group="ctf-crypto">
+  <h3><a href="ctf-crypto/prng/SKILL.md">prng</a></h3>
+  <p>Foundational PRNG state/seed recovery techniques. For CTF-era advanced attacks (MT19937 constraint propagation, Rule 86 cellular automaton, Java LCG MITM, LFSR bit-fold, Z3 timing oracle, randcrack DS</p>
+  <div class="meta">ctf-crypto/prng/SKILL.md</div>
+</article>
+<article class="card" data-name="prng-attacks" data-desc="advanced ctf-specific prng attacks from 2017 onward. for foundational prng recovery (mt19937, lcg parameter recovery, chacha20, v8 xorshift128+, password cracking), see [prng.md](../prng/skill.md)." data-group="ctf-crypto">
+  <h3><a href="ctf-crypto/prng-attacks/SKILL.md">prng-attacks</a></h3>
+  <p>Advanced CTF-specific PRNG attacks from 2017 onward. For foundational PRNG recovery (MT19937, LCG parameter recovery, ChaCha20, V8 XorShift128+, password cracking), see [prng.md](../prng/SKILL.md).</p>
+  <div class="meta">ctf-crypto/prng-attacks/SKILL.md</div>
+</article>
+<article class="card" data-name="rsa-attacks" data-desc="- [small public exponent (cube root)](#small-public-exponent-cube-root)" data-group="ctf-crypto">
+  <h3><a href="ctf-crypto/rsa-attacks/SKILL.md">rsa-attacks</a></h3>
+  <p>- [Small Public Exponent (Cube Root)](#small-public-exponent-cube-root)</p>
+  <div class="meta">ctf-crypto/rsa-attacks/SKILL.md</div>
+</article>
+<article class="card" data-name="rsa-attacks-2" data-desc="- [rsa p=q validation bypass (bearcatctf 2026)](#rsa-pq-validation-bypass-bearcatctf-2026)" data-group="ctf-crypto">
+  <h3><a href="ctf-crypto/rsa-attacks-2/SKILL.md">rsa-attacks-2</a></h3>
+  <p>- [RSA p=q Validation Bypass (BearCatCTF 2026)](#rsa-pq-validation-bypass-bearcatctf-2026)</p>
+  <div class="meta">ctf-crypto/rsa-attacks-2/SKILL.md</div>
+</article>
+<article class="card" data-name="stream-ciphers" data-desc="lfsr, rc4, and xor-based stream cipher attacks. for block cipher attacks (aes, padding oracle, mac forgery), see [modern-ciphers.md](../modern-ciphers/skill.md)." data-group="ctf-crypto">
+  <h3><a href="ctf-crypto/stream-ciphers/SKILL.md">stream-ciphers</a></h3>
+  <p>LFSR, RC4, and XOR-based stream cipher attacks. For block cipher attacks (AES, padding oracle, MAC forgery), see [modern-ciphers.md](../modern-ciphers/SKILL.md).</p>
+  <div class="meta">ctf-crypto/stream-ciphers/SKILL.md</div>
+</article>
+<article class="card" data-name="zkp-and-advanced" data-desc="- [zkp attacks](#zkp-attacks)" data-group="ctf-crypto">
+  <h3><a href="ctf-crypto/zkp-and-advanced/SKILL.md">zkp-and-advanced</a></h3>
+  <p>- [ZKP Attacks](#zkp-attacks)</p>
+  <div class="meta">ctf-crypto/zkp-and-advanced/SKILL.md</div>
+</article></div>
+</section><section id="grp-ctf-forensics" class="group-section">
+  <h2>ctf-forensics <span>15 skills</span></h2>
+  <div class="grid"><article class="card" data-name="3d-printing" data-desc="- [prusaslicer binary g-code (.g / .bgcode)](#prusaslicer-binary-g-code-g--bgcode)" data-group="ctf-forensics">
+  <h3><a href="ctf-forensics/3d-printing/SKILL.md">3d-printing</a></h3>
+  <p>- [PrusaSlicer Binary G-code (.g / .bgcode)](#prusaslicer-binary-g-code-g--bgcode)</p>
+  <div class="meta">ctf-forensics/3d-printing/SKILL.md</div>
+</article>
+<article class="card" data-name="ctf-forensics" data-desc="provides digital forensics and signal analysis techniques for ctf challenges. use when analyzing disk images, memory dumps, event logs, network captures, cryptocurrency transactions, steganography, pdf analysis, windows registry, volatility, pcap, docker images, coredumps, side-channel power traces, dtmf audio spectrograms, packet timing analysis, cd audio disc images, or recovering deleted files and credentials." data-group="ctf-forensics">
+  <h3><a href="ctf-forensics/SKILL.md">ctf-forensics</a></h3>
+  <p>Provides digital forensics and signal analysis techniques for CTF challenges. Use when analyzing disk images, memory dumps, event logs, network captures, cryptocurrency transactions, steganography, PDF analysis, Windows registry, Volatility, PCAP, Docker images, coredumps, side-channel power traces, DTMF audio spectrograms, packet timing analysis, CD audio disc images, or recovering deleted files and credentials.</p>
+  <div class="meta">ctf-forensics/SKILL.md</div>
+</article>
+<article class="card" data-name="disk-advanced" data-desc="- [deleted partition recovery](#deleted-partition-recovery)" data-group="ctf-forensics">
+  <h3><a href="ctf-forensics/disk-advanced/SKILL.md">disk-advanced</a></h3>
+  <p>- [Deleted Partition Recovery](#deleted-partition-recovery)</p>
+  <div class="meta">ctf-forensics/disk-advanced/SKILL.md</div>
+</article>
+<article class="card" data-name="disk-and-memory" data-desc="- [memory forensics (volatility 3)](#memory-forensics-volatility-3)" data-group="ctf-forensics">
+  <h3><a href="ctf-forensics/disk-and-memory/SKILL.md">disk-and-memory</a></h3>
+  <p>- [Memory Forensics (Volatility 3)](#memory-forensics-volatility-3)</p>
+  <div class="meta">ctf-forensics/disk-and-memory/SKILL.md</div>
+</article>
+<article class="card" data-name="disk-recovery" data-desc="- [luks master key recovery from memory dump (hack.lu 2015)](#luks-master-key-recovery-from-memory-dump-hacklu-2015)" data-group="ctf-forensics">
+  <h3><a href="ctf-forensics/disk-recovery/SKILL.md">disk-recovery</a></h3>
+  <p>- [LUKS Master Key Recovery from Memory Dump (Hack.lu 2015)](#luks-master-key-recovery-from-memory-dump-hacklu-2015)</p>
+  <div class="meta">ctf-forensics/disk-recovery/SKILL.md</div>
+</article>
+<article class="card" data-name="linux-forensics" data-desc="- [log analysis](#log-analysis)" data-group="ctf-forensics">
+  <h3><a href="ctf-forensics/linux-forensics/SKILL.md">linux-forensics</a></h3>
+  <p>- [Log Analysis](#log-analysis)</p>
+  <div class="meta">ctf-forensics/linux-forensics/SKILL.md</div>
+</article>
+<article class="card" data-name="network" data-desc="- [tcpdump quick reference](#tcpdump-quick-reference)" data-group="ctf-forensics">
+  <h3><a href="ctf-forensics/network/SKILL.md">network</a></h3>
+  <p>- [tcpdump Quick Reference](#tcpdump-quick-reference)</p>
+  <div class="meta">ctf-forensics/network/SKILL.md</div>
+</article>
+<article class="card" data-name="network-advanced" data-desc="for usb/hid/bluetooth peripheral capture analysis (mouse/pen drawing recovery, keyboard scan codes, led morse exfiltration, rfcomm reassembly), see [peripheral-capture.md](../peripheral-capture/skill.md). for" data-group="ctf-forensics">
+  <h3><a href="ctf-forensics/network-advanced/SKILL.md">network-advanced</a></h3>
+  <p>For USB/HID/Bluetooth peripheral capture analysis (mouse/pen drawing recovery, keyboard scan codes, LED Morse exfiltration, RFCOMM reassembly), see [peripheral-capture.md](../peripheral-capture/SKILL.md). For</p>
+  <div class="meta">ctf-forensics/network-advanced/SKILL.md</div>
+</article>
+<article class="card" data-name="peripheral-capture" data-desc="usb, hid, and bluetooth peripheral traffic reconstruction from packet captures. for general network pcap forensics (dns/tcp/icmp/smb/radius/rc4), see [network-advanced.md](../network-advanced/skill.md). for ba" data-group="ctf-forensics">
+  <h3><a href="ctf-forensics/peripheral-capture/SKILL.md">peripheral-capture</a></h3>
+  <p>USB, HID, and Bluetooth peripheral traffic reconstruction from packet captures. For general network PCAP forensics (DNS/TCP/ICMP/SMB/RADIUS/RC4), see [network-advanced.md](../network-advanced/SKILL.md). For ba</p>
+  <div class="meta">ctf-forensics/peripheral-capture/SKILL.md</div>
+</article>
+<article class="card" data-name="signals-and-hardware" data-desc="- [vga signal decoding](#vga-signal-decoding)" data-group="ctf-forensics">
+  <h3><a href="ctf-forensics/signals-and-hardware/SKILL.md">signals-and-hardware</a></h3>
+  <p>- [VGA Signal Decoding](#vga-signal-decoding)</p>
+  <div class="meta">ctf-forensics/signals-and-hardware/SKILL.md</div>
+</article>
+<article class="card" data-name="steganography" data-desc="non-image steganography techniques (pdf, svg, terminal, text, compression, spreadsheet) and general-purpose image stego patterns (png structure, file overlays, gif, autostereograms, interleaving). for" data-group="ctf-forensics">
+  <h3><a href="ctf-forensics/steganography/SKILL.md">steganography</a></h3>
+  <p>Non-image steganography techniques (PDF, SVG, terminal, text, compression, spreadsheet) and general-purpose image stego patterns (PNG structure, file overlays, GIF, autostereograms, interleaving). For</p>
+  <div class="meta">ctf-forensics/steganography/SKILL.md</div>
+</article>
+<article class="card" data-name="stego-advanced" data-desc="see also: [stego-advanced-2.md](../stego-advanced-2/skill.md) for video frame techniques, jpeg xl toc permutation, arnold&#x27;s cat map, sstv fm demodulation, mjpeg steganography, exif/stegano pixel patterns, pdf" data-group="ctf-forensics">
+  <h3><a href="ctf-forensics/stego-advanced/SKILL.md">stego-advanced</a></h3>
+  <p>See also: [stego-advanced-2.md](../stego-advanced-2/SKILL.md) for video frame techniques, JPEG XL TOC permutation, Arnold&#x27;s Cat Map, SSTV FM demodulation, MJPEG steganography, EXIF/Stegano pixel patterns, PDF</p>
+  <div class="meta">ctf-forensics/stego-advanced/SKILL.md</div>
+</article>
+<article class="card" data-name="stego-advanced-2" data-desc="see also: [stego-advanced.md](../stego-advanced/skill.md) for audio steganography (fft frequency domain, dtmf, sstv, lsb audio, musical notes, metadata encoding, waveform binary, spectrogram qr) and whitespace" data-group="ctf-forensics">
+  <h3><a href="ctf-forensics/stego-advanced-2/SKILL.md">stego-advanced-2</a></h3>
+  <p>See also: [stego-advanced.md](../stego-advanced/SKILL.md) for audio steganography (FFT frequency domain, DTMF, SSTV, LSB audio, musical notes, metadata encoding, waveform binary, spectrogram QR) and whitespace</p>
+  <div class="meta">ctf-forensics/stego-advanced-2/SKILL.md</div>
+</article>
+<article class="card" data-name="stego-image" data-desc="techniques specific to hiding data in image formats (jpeg, png, bmp, gif). for non-image steganography (pdf, audio, terminal, text), see [steganography.md](../steganography/skill.md). for advanced techniques (" data-group="ctf-forensics">
+  <h3><a href="ctf-forensics/stego-image/SKILL.md">stego-image</a></h3>
+  <p>Techniques specific to hiding data in image formats (JPEG, PNG, BMP, GIF). For non-image steganography (PDF, audio, terminal, text), see [steganography.md](../steganography/SKILL.md). For advanced techniques (</p>
+  <div class="meta">ctf-forensics/stego-image/SKILL.md</div>
+</article>
+<article class="card" data-name="windows" data-desc="- [windows event logs (.evtx)](#windows-event-logs-evtx)" data-group="ctf-forensics">
+  <h3><a href="ctf-forensics/windows/SKILL.md">windows</a></h3>
+  <p>- [Windows Event Logs (.evtx)](#windows-event-logs-evtx)</p>
+  <div class="meta">ctf-forensics/windows/SKILL.md</div>
+</article></div>
+</section><section id="grp-ctf-malware" class="group-section">
+  <h2>ctf-malware <span>4 skills</span></h2>
+  <div class="grid"><article class="card" data-name="c2-and-protocols" data-desc="- [pcap analysis](#pcap-analysis)" data-group="ctf-malware">
+  <h3><a href="ctf-malware/c2-and-protocols/SKILL.md">c2-and-protocols</a></h3>
+  <p>- [PCAP Analysis](#pcap-analysis)</p>
+  <div class="meta">ctf-malware/c2-and-protocols/SKILL.md</div>
+</article>
+<article class="card" data-name="ctf-malware" data-desc="provides malware analysis and network traffic techniques for ctf challenges. use when analyzing obfuscated scripts, malicious packages, custom crypto protocols, c2 traffic, pe/.net binaries, rc4/aes encrypted communications, yara rules, shellcode analysis, memory forensics for malware (volatility malfind, process injection detection), anti-analysis techniques (vm/sandbox detection, timing evasion, api hashing, process injection, environment checks), or extracting malware configurations and indicators of compromise." data-group="ctf-malware">
+  <h3><a href="ctf-malware/SKILL.md">ctf-malware</a></h3>
+  <p>Provides malware analysis and network traffic techniques for CTF challenges. Use when analyzing obfuscated scripts, malicious packages, custom crypto protocols, C2 traffic, PE/.NET binaries, RC4/AES encrypted communications, YARA rules, shellcode analysis, memory forensics for malware (Volatility malfind, process injection detection), anti-analysis techniques (VM/sandbox detection, timing evasion, API hashing, process injection, environment checks), or extracting malware configurations and indicators of compromise.</p>
+  <div class="meta">ctf-malware/SKILL.md</div>
+</article>
+<article class="card" data-name="pe-and-dotnet" data-desc="- [pe analysis](#pe-analysis)" data-group="ctf-malware">
+  <h3><a href="ctf-malware/pe-and-dotnet/SKILL.md">pe-and-dotnet</a></h3>
+  <p>- [PE Analysis](#pe-analysis)</p>
+  <div class="meta">ctf-malware/pe-and-dotnet/SKILL.md</div>
+</article>
+<article class="card" data-name="scripts-and-obfuscation" data-desc="- [obfuscated scripts (general)](#obfuscated-scripts-general)" data-group="ctf-malware">
+  <h3><a href="ctf-malware/scripts-and-obfuscation/SKILL.md">scripts-and-obfuscation</a></h3>
+  <p>- [Obfuscated Scripts (General)](#obfuscated-scripts-general)</p>
+  <div class="meta">ctf-malware/scripts-and-obfuscation/SKILL.md</div>
+</article></div>
+</section><section id="grp-ctf-misc" class="group-section">
+  <h2>ctf-misc <span>13 skills</span></h2>
+  <div class="grid"><article class="card" data-name="bashjails" data-desc="- [identifying the jail](#identifying-the-jail)" data-group="ctf-misc">
+  <h3><a href="ctf-misc/bashjails/SKILL.md">bashjails</a></h3>
+  <p>- [Identifying the Jail](#identifying-the-jail)</p>
+  <div class="meta">ctf-misc/bashjails/SKILL.md</div>
+</article>
+<article class="card" data-name="ctf-misc" data-desc="provides miscellaneous ctf challenge techniques for problems that do not cleanly fit the main categories. use for encoding puzzles, pyjails, bash jails, rf/sdr, dns oddities, unicode tricks, esoteric languages, qr or audio puzzles, constraint solving, game theory, unusual sandbox escapes, and hybrid logic puzzles. prefer a more specific skill first when the challenge is mainly web, pwn, reverse, forensics, malware, osint, or crypto. treat this as the fallback skill for genuine cross-category or edge-case challenges, not the default starting point." data-group="ctf-misc">
+  <h3><a href="ctf-misc/SKILL.md">ctf-misc</a></h3>
+  <p>Provides miscellaneous CTF challenge techniques for problems that do not cleanly fit the main categories. Use for encoding puzzles, pyjails, bash jails, RF/SDR, DNS oddities, unicode tricks, esoteric languages, QR or audio puzzles, constraint solving, game theory, unusual sandbox escapes, and hybrid logic puzzles. Prefer a more specific skill first when the challenge is mainly web, pwn, reverse, forensics, malware, OSINT, or crypto. Treat this as the fallback skill for genuine cross-category or edge-case challenges, not the default starting point.</p>
+  <div class="meta">ctf-misc/SKILL.md</div>
+</article>
+<article class="card" data-name="ctfd-navigation" data-desc="programmatic interaction with ctfd-based ctf platforms via rest api. eliminates browser dependency during competitions." data-group="ctf-misc">
+  <h3><a href="ctf-misc/ctfd-navigation/SKILL.md">ctfd-navigation</a></h3>
+  <p>Programmatic interaction with CTFd-based CTF platforms via REST API. Eliminates browser dependency during competitions.</p>
+  <div class="meta">ctf-misc/ctfd-navigation/SKILL.md</div>
+</article>
+<article class="card" data-name="dns" data-desc="- [edns client subnet (ecs) spoofing](#edns-client-subnet-ecs-spoofing)" data-group="ctf-misc">
+  <h3><a href="ctf-misc/dns/SKILL.md">dns</a></h3>
+  <p>- [EDNS Client Subnet (ECS) Spoofing](#edns-client-subnet-ecs-spoofing)</p>
+  <div class="meta">ctf-misc/dns/SKILL.md</div>
+</article>
+<article class="card" data-name="encodings" data-desc="- [common encodings](#common-encodings)" data-group="ctf-misc">
+  <h3><a href="ctf-misc/encodings/SKILL.md">encodings</a></h3>
+  <p>- [Common Encodings](#common-encodings)</p>
+  <div class="meta">ctf-misc/encodings/SKILL.md</div>
+</article>
+<article class="card" data-name="encodings-advanced" data-desc="- [verilog/hdl](#veriloghdl)" data-group="ctf-misc">
+  <h3><a href="ctf-misc/encodings-advanced/SKILL.md">encodings-advanced</a></h3>
+  <p>- [Verilog/HDL](#veriloghdl)</p>
+  <div class="meta">ctf-misc/encodings-advanced/SKILL.md</div>
+</article>
+<article class="card" data-name="games-and-vms" data-desc="- [wasm game exploitation via patching](#wasm-game-exploitation-via-patching)" data-group="ctf-misc">
+  <h3><a href="ctf-misc/games-and-vms/SKILL.md">games-and-vms</a></h3>
+  <p>- [WASM Game Exploitation via Patching](#wasm-game-exploitation-via-patching)</p>
+  <div class="meta">ctf-misc/games-and-vms/SKILL.md</div>
+</article>
+<article class="card" data-name="games-and-vms-2" data-desc="- [cookie checkpoint game brute-forcing (bypass ctf 2025)](#cookie-checkpoint-game-brute-forcing-bypass-ctf-2025)" data-group="ctf-misc">
+  <h3><a href="ctf-misc/games-and-vms-2/SKILL.md">games-and-vms-2</a></h3>
+  <p>- [Cookie Checkpoint Game Brute-Forcing (BYPASS CTF 2025)](#cookie-checkpoint-game-brute-forcing-bypass-ctf-2025)</p>
+  <div class="meta">ctf-misc/games-and-vms-2/SKILL.md</div>
+</article>
+<article class="card" data-name="games-and-vms-3" data-desc="- [memfd_create packed binaries](#memfd_create-packed-binaries)" data-group="ctf-misc">
+  <h3><a href="ctf-misc/games-and-vms-3/SKILL.md">games-and-vms-3</a></h3>
+  <p>- [memfd_create Packed Binaries](#memfd_create-packed-binaries)</p>
+  <div class="meta">ctf-misc/games-and-vms-3/SKILL.md</div>
+</article>
+<article class="card" data-name="games-and-vms-4" data-desc="additional ctf-era challenges extracted from 2018+ writeups. for earlier parts, see [games-and-vms.md](../games-and-vms/skill.md), [games-and-vms-2.md](../games-and-vms-2/skill.md), and [games-and-vms-3.md](games-and-v" data-group="ctf-misc">
+  <h3><a href="ctf-misc/games-and-vms-4/SKILL.md">games-and-vms-4</a></h3>
+  <p>Additional CTF-era challenges extracted from 2018+ writeups. For earlier parts, see [games-and-vms.md](../games-and-vms/SKILL.md), [games-and-vms-2.md](../games-and-vms-2/SKILL.md), and [games-and-vms-3.md](games-and-v</p>
+  <div class="meta">ctf-misc/games-and-vms-4/SKILL.md</div>
+</article>
+<article class="card" data-name="linux-privesc" data-desc="techniques from hackthebox machine writeups covering sudo abuse, service misconfigurations, database exploitation, and credential extraction." data-group="ctf-misc">
+  <h3><a href="ctf-misc/linux-privesc/SKILL.md">linux-privesc</a></h3>
+  <p>Techniques from HackTheBox machine writeups covering sudo abuse, service misconfigurations, database exploitation, and credential extraction.</p>
+  <div class="meta">ctf-misc/linux-privesc/SKILL.md</div>
+</article>
+<article class="card" data-name="pyjails" data-desc="- [identifying jail type](#identifying-jail-type)" data-group="ctf-misc">
+  <h3><a href="ctf-misc/pyjails/SKILL.md">pyjails</a></h3>
+  <p>- [Identifying Jail Type](#identifying-jail-type)</p>
+  <div class="meta">ctf-misc/pyjails/SKILL.md</div>
+</article>
+<article class="card" data-name="rf-sdr" data-desc="techniques for software-defined radio (sdr) signal processing using in-phase/quadrature (iq) data." data-group="ctf-misc">
+  <h3><a href="ctf-misc/rf-sdr/SKILL.md">rf-sdr</a></h3>
+  <p>Techniques for Software-Defined Radio (SDR) signal processing using In-phase/Quadrature (IQ) data.</p>
+  <div class="meta">ctf-misc/rf-sdr/SKILL.md</div>
+</article></div>
+</section><section id="grp-ctf-osint" class="group-section">
+  <h2>ctf-osint <span>4 skills</span></h2>
+  <div class="grid"><article class="card" data-name="ctf-osint" data-desc="provides open source intelligence techniques for ctf challenges. use when gathering information from public sources, social media, geolocation, dns records, username enumeration, reverse image search, google dorking, wayback machine, tor relays, fec filings, or identifying unknown data like hashes and coordinates." data-group="ctf-osint">
+  <h3><a href="ctf-osint/SKILL.md">ctf-osint</a></h3>
+  <p>Provides open source intelligence techniques for CTF challenges. Use when gathering information from public sources, social media, geolocation, DNS records, username enumeration, reverse image search, Google dorking, Wayback Machine, Tor relays, FEC filings, or identifying unknown data like hashes and coordinates.</p>
+  <div class="meta">ctf-osint/SKILL.md</div>
+</article>
+<article class="card" data-name="geolocation-and-media" data-desc="- [image analysis](#image-analysis)" data-group="ctf-osint">
+  <h3><a href="ctf-osint/geolocation-and-media/SKILL.md">geolocation-and-media</a></h3>
+  <p>- [Image Analysis](#image-analysis)</p>
+  <div class="meta">ctf-osint/geolocation-and-media/SKILL.md</div>
+</article>
+<article class="card" data-name="social-media" data-desc="- [twitter/x account tracking](#twitterx-account-tracking)" data-group="ctf-osint">
+  <h3><a href="ctf-osint/social-media/SKILL.md">social-media</a></h3>
+  <p>- [Twitter/X Account Tracking](#twitterx-account-tracking)</p>
+  <div class="meta">ctf-osint/social-media/SKILL.md</div>
+</article>
+<article class="card" data-name="web-and-dns" data-desc="- [google dorking](#google-dorking)" data-group="ctf-osint">
+  <h3><a href="ctf-osint/web-and-dns/SKILL.md">web-and-dns</a></h3>
+  <p>- [Google Dorking](#google-dorking)</p>
+  <div class="meta">ctf-osint/web-and-dns/SKILL.md</div>
+</article></div>
+</section><section id="grp-ctf-pwn" class="group-section">
+  <h2>ctf-pwn <span>19 skills</span></h2>
+  <div class="grid"><article class="card" data-name="advanced" data-desc="- [seccomp advanced techniques](#seccomp-advanced-techniques)" data-group="ctf-pwn">
+  <h3><a href="ctf-pwn/advanced/SKILL.md">advanced</a></h3>
+  <p>- [Seccomp Advanced Techniques](#seccomp-advanced-techniques)</p>
+  <div class="meta">ctf-pwn/advanced/SKILL.md</div>
+</article>
+<article class="card" data-name="advanced-exploits" data-desc="- [vm signed comparison bug (0xfun 2026)](#vm-signed-comparison-bug-0xfun-2026)" data-group="ctf-pwn">
+  <h3><a href="ctf-pwn/advanced-exploits/SKILL.md">advanced-exploits</a></h3>
+  <p>- [VM Signed Comparison Bug (0xFun 2026)](#vm-signed-comparison-bug-0xfun-2026)</p>
+  <div class="meta">ctf-pwn/advanced-exploits/SKILL.md</div>
+</article>
+<article class="card" data-name="advanced-exploits-2" data-desc="- [bytecode validator bypass via self-modification (srdnlenctf 2026)](#bytecode-validator-bypass-via-self-modification-srdnlenctf-2026)" data-group="ctf-pwn">
+  <h3><a href="ctf-pwn/advanced-exploits-2/SKILL.md">advanced-exploits-2</a></h3>
+  <p>- [Bytecode Validator Bypass via Self-Modification (srdnlenCTF 2026)](#bytecode-validator-bypass-via-self-modification-srdnlenctf-2026)</p>
+  <div class="meta">ctf-pwn/advanced-exploits-2/SKILL.md</div>
+</article>
+<article class="card" data-name="advanced-exploits-3" data-desc="- [stack variable overlap / carry corruption oob (srdnlenctf 2026)](#stack-variable-overlap--carry-corruption-oob-srdnlenctf-2026)" data-group="ctf-pwn">
+  <h3><a href="ctf-pwn/advanced-exploits-3/SKILL.md">advanced-exploits-3</a></h3>
+  <p>- [Stack Variable Overlap / Carry Corruption OOB (srdnlenCTF 2026)](#stack-variable-overlap--carry-corruption-oob-srdnlenctf-2026)</p>
+  <div class="meta">ctf-pwn/advanced-exploits-3/SKILL.md</div>
+</article>
+<article class="card" data-name="advanced-exploits-4" data-desc="windows exploitation, arm shellcode, forth interpreter exploitation, and gf(2) gaussian elimination for heap corruption." data-group="ctf-pwn">
+  <h3><a href="ctf-pwn/advanced-exploits-4/SKILL.md">advanced-exploits-4</a></h3>
+  <p>Windows exploitation, ARM shellcode, Forth interpreter exploitation, and GF(2) Gaussian elimination for heap corruption.</p>
+  <div class="meta">ctf-pwn/advanced-exploits-4/SKILL.md</div>
+</article>
+<article class="card" data-name="advanced-exploits-5" data-desc="data-interpretation exploitation — cases where the vulnerable program reinterprets attacker-controlled data (bytecode, floats, hash values) in ways that bypass bounds checks or stack protection. for e" data-group="ctf-pwn">
+  <h3><a href="ctf-pwn/advanced-exploits-5/SKILL.md">advanced-exploits-5</a></h3>
+  <p>Data-interpretation exploitation — cases where the vulnerable program reinterprets attacker-controlled data (bytecode, floats, hash values) in ways that bypass bounds checks or stack protection. For e</p>
+  <div class="meta">ctf-pwn/advanced-exploits-5/SKILL.md</div>
+</article>
+<article class="card" data-name="ctf-pwn" data-desc="provides binary exploitation techniques for ctf challenges. use when you already have a vulnerable native target or service and need to turn memory corruption or low-level primitives into code execution or privilege escalation, such as buffer overflows, format strings, heap bugs, rop, ret2libc, shellcode, kernel exploitation, seccomp bypass, sandbox escape, or windows/linux exploit chains. do not use it when the main blocker is understanding what the binary does; use reverse engineering first. do not use it for pure web bugs, disk or packet forensics, or standalone crypto/math challenges." data-group="ctf-pwn">
+  <h3><a href="ctf-pwn/SKILL.md">ctf-pwn</a></h3>
+  <p>Provides binary exploitation techniques for CTF challenges. Use when you already have a vulnerable native target or service and need to turn memory corruption or low-level primitives into code execution or privilege escalation, such as buffer overflows, format strings, heap bugs, ROP, ret2libc, shellcode, kernel exploitation, seccomp bypass, sandbox escape, or Windows/Linux exploit chains. Do not use it when the main blocker is understanding what the binary does; use reverse engineering first. Do not use it for pure web bugs, disk or packet forensics, or standalone crypto/math challenges.</p>
+  <div class="meta">ctf-pwn/SKILL.md</div>
+</article>
+<article class="card" data-name="field-notes" data-desc="detailed pwn notes that support [`skill.md`](../skill.md). read this file after confirming the challenge really needs exploitation." data-group="ctf-pwn">
+  <h3><a href="ctf-pwn/field-notes/SKILL.md">field-notes</a></h3>
+  <p>Detailed pwn notes that support [`SKILL.md`](../SKILL.md). Read this file after confirming the challenge really needs exploitation.</p>
+  <div class="meta">ctf-pwn/field-notes/SKILL.md</div>
+</article>
+<article class="card" data-name="format-string" data-desc="- [format string basics](#format-string-basics)" data-group="ctf-pwn">
+  <h3><a href="ctf-pwn/format-string/SKILL.md">format-string</a></h3>
+  <p>- [Format String Basics](#format-string-basics)</p>
+  <div class="meta">ctf-pwn/format-string/SKILL.md</div>
+</article>
+<article class="card" data-name="heap-fsop" data-desc="file-structure (_io_file) exploitation for libc 2.23-2.27+: fastbin→stdout vtable hijack, _io_buf_base null byte overwrites, glibc 2.24+ vtable validation bypass, unsorted-bin attacks on file fields," data-group="ctf-pwn">
+  <h3><a href="ctf-pwn/heap-fsop/SKILL.md">heap-fsop</a></h3>
+  <p>FILE-structure (_IO_FILE) exploitation for libc 2.23-2.27+: fastbin→stdout vtable hijack, _IO_buf_base null byte overwrites, glibc 2.24+ vtable validation bypass, unsorted-bin attacks on FILE fields,</p>
+  <div class="meta">ctf-pwn/heap-fsop/SKILL.md</div>
+</article>
+<article class="card" data-name="heap-techniques" data-desc="- [house of apple 2 — fsop for glibc 2.34+ (0xfun 2026)](#house-of-apple-2--fsop-for-glibc-234-0xfun-2026)" data-group="ctf-pwn">
+  <h3><a href="ctf-pwn/heap-techniques/SKILL.md">heap-techniques</a></h3>
+  <p>- [House of Apple 2 — FSOP for glibc 2.34+ (0xFun 2026)](#house-of-apple-2--fsop-for-glibc-234-0xfun-2026)</p>
+  <div class="meta">ctf-pwn/heap-techniques/SKILL.md</div>
+</article>
+<article class="card" data-name="heap-techniques-2" data-desc="continuation of [heap-techniques.md](../heap-techniques/skill.md). part 2 collects ctf-specific uaf, tcache, and custom-allocator variants drawn from individual writeups." data-group="ctf-pwn">
+  <h3><a href="ctf-pwn/heap-techniques-2/SKILL.md">heap-techniques-2</a></h3>
+  <p>Continuation of [heap-techniques.md](../heap-techniques/SKILL.md). Part 2 collects CTF-specific UAF, tcache, and custom-allocator variants drawn from individual writeups.</p>
+  <div class="meta">ctf-pwn/heap-techniques-2/SKILL.md</div>
+</article>
+<article class="card" data-name="kernel" data-desc="- [environment setup and recon](#environment-setup-and-recon)" data-group="ctf-pwn">
+  <h3><a href="ctf-pwn/kernel/SKILL.md">kernel</a></h3>
+  <p>- [Environment Setup and Recon](#environment-setup-and-recon)</p>
+  <div class="meta">ctf-pwn/kernel/SKILL.md</div>
+</article>
+<article class="card" data-name="kernel-bypass" data-desc="- [kaslr and fgkaslr bypass](#kaslr-and-fgkaslr-bypass)" data-group="ctf-pwn">
+  <h3><a href="ctf-pwn/kernel-bypass/SKILL.md">kernel-bypass</a></h3>
+  <p>- [KASLR and FGKASLR Bypass](#kaslr-and-fgkaslr-bypass)</p>
+  <div class="meta">ctf-pwn/kernel-bypass/SKILL.md</div>
+</article>
+<article class="card" data-name="kernel-techniques" data-desc="- [tty_struct rip hijack and krop](#tty_struct-rip-hijack-and-krop)" data-group="ctf-pwn">
+  <h3><a href="ctf-pwn/kernel-techniques/SKILL.md">kernel-techniques</a></h3>
+  <p>- [tty_struct RIP Hijack and kROP](#tty_struct-rip-hijack-and-krop)</p>
+  <div class="meta">ctf-pwn/kernel-techniques/SKILL.md</div>
+</article>
+<article class="card" data-name="overflow-basics" data-desc="- [stack buffer overflow](#stack-buffer-overflow)" data-group="ctf-pwn">
+  <h3><a href="ctf-pwn/overflow-basics/SKILL.md">overflow-basics</a></h3>
+  <p>- [Stack Buffer Overflow](#stack-buffer-overflow)</p>
+  <div class="meta">ctf-pwn/overflow-basics/SKILL.md</div>
+</article>
+<article class="card" data-name="rop-advanced" data-desc="- [double stack pivot to bss via leave;ret (midnightflag 2026)](#double-stack-pivot-to-bss-via-leaveret-midnightflag-2026)" data-group="ctf-pwn">
+  <h3><a href="ctf-pwn/rop-advanced/SKILL.md">rop-advanced</a></h3>
+  <p>- [Double Stack Pivot to BSS via leave;ret (Midnightflag 2026)](#double-stack-pivot-to-bss-via-leaveret-midnightflag-2026)</p>
+  <div class="meta">ctf-pwn/rop-advanced/SKILL.md</div>
+</article>
+<article class="card" data-name="rop-and-shellcode" data-desc="- [rop chain building](#rop-chain-building)" data-group="ctf-pwn">
+  <h3><a href="ctf-pwn/rop-and-shellcode/SKILL.md">rop-and-shellcode</a></h3>
+  <p>- [ROP Chain Building](#rop-chain-building)</p>
+  <div class="meta">ctf-pwn/rop-and-shellcode/SKILL.md</div>
+</article>
+<article class="card" data-name="sandbox-escape" data-desc="- [python sandbox escape](#python-sandbox-escape)" data-group="ctf-pwn">
+  <h3><a href="ctf-pwn/sandbox-escape/SKILL.md">sandbox-escape</a></h3>
+  <p>- [Python Sandbox Escape](#python-sandbox-escape)</p>
+  <div class="meta">ctf-pwn/sandbox-escape/SKILL.md</div>
+</article></div>
+</section><section id="grp-ctf-reverse" class="group-section">
+  <h2>ctf-reverse <span>19 skills</span></h2>
+  <div class="grid"><article class="card" data-name="anti-analysis" data-desc="comprehensive reference for anti-debugging, anti-vm, anti-dbi, and integrity-check techniques encountered in ctf challenges, with practical bypasses." data-group="ctf-reverse">
+  <h3><a href="ctf-reverse/anti-analysis/SKILL.md">anti-analysis</a></h3>
+  <p>Comprehensive reference for anti-debugging, anti-VM, anti-DBI, and integrity-check techniques encountered in CTF challenges, with practical bypasses.</p>
+  <div class="meta">ctf-reverse/anti-analysis/SKILL.md</div>
+</article>
+<article class="card" data-name="anti-analysis-ctf" data-desc="ctf-specific anti-analysis techniques: signal-handler tricks, instruction-trace inversion, call-less function chaining, parent-patched child binary dumping. for the core anti-analysis taxonomy (linux/" data-group="ctf-reverse">
+  <h3><a href="ctf-reverse/anti-analysis-ctf/SKILL.md">anti-analysis-ctf</a></h3>
+  <p>CTF-specific anti-analysis techniques: signal-handler tricks, instruction-trace inversion, call-less function chaining, parent-patched child binary dumping. For the core anti-analysis taxonomy (Linux/</p>
+  <div class="meta">ctf-reverse/anti-analysis-ctf/SKILL.md</div>
+</article>
+<article class="card" data-name="ctf-reverse" data-desc="provides reverse engineering techniques for ctf challenges. use when the main job is to understand how a compiled, obfuscated, packed, or virtualized target works before exploiting or solving it, including binaries, apks, wasm, firmware, custom vms, bytecode, game clients, malware-like loaders, and anti-debug or anti-analysis logic. do not use it when the vulnerability is already understood and the remaining task is exploitation; use pwn instead. do not use it for pure web workflows, log or disk forensics, or standalone crypto problems unless reversing the implementation is the real blocker." data-group="ctf-reverse">
+  <h3><a href="ctf-reverse/SKILL.md">ctf-reverse</a></h3>
+  <p>Provides reverse engineering techniques for CTF challenges. Use when the main job is to understand how a compiled, obfuscated, packed, or virtualized target works before exploiting or solving it, including binaries, APKs, WASM, firmware, custom VMs, bytecode, game clients, malware-like loaders, and anti-debug or anti-analysis logic. Do not use it when the vulnerability is already understood and the remaining task is exploitation; use pwn instead. Do not use it for pure web workflows, log or disk forensics, or standalone crypto problems unless reversing the implementation is the real blocker.</p>
+  <div class="meta">ctf-reverse/SKILL.md</div>
+</article>
+<article class="card" data-name="field-notes" data-desc="detailed quick notes that support [`skill.md`](../skill.md). read this file after triage, not before." data-group="ctf-reverse">
+  <h3><a href="ctf-reverse/field-notes/SKILL.md">field-notes</a></h3>
+  <p>Detailed quick notes that support [`SKILL.md`](../SKILL.md). Read this file after triage, not before.</p>
+  <div class="meta">ctf-reverse/field-notes/SKILL.md</div>
+</article>
+<article class="card" data-name="languages" data-desc="- [python bytecode reversing (dis.dis output)](#python-bytecode-reversing-disdis-output)" data-group="ctf-reverse">
+  <h3><a href="ctf-reverse/languages/SKILL.md">languages</a></h3>
+  <p>- [Python Bytecode Reversing (dis.dis output)](#python-bytecode-reversing-disdis-output)</p>
+  <div class="meta">ctf-reverse/languages/SKILL.md</div>
+</article>
+<article class="card" data-name="languages-compiled" data-desc="- [go binary reversing](#go-binary-reversing)" data-group="ctf-reverse">
+  <h3><a href="ctf-reverse/languages-compiled/SKILL.md">languages-compiled</a></h3>
+  <p>- [Go Binary Reversing](#go-binary-reversing)</p>
+  <div class="meta">ctf-reverse/languages-compiled/SKILL.md</div>
+</article>
+<article class="card" data-name="languages-platforms" data-desc="- [roblox place file analysis](#roblox-place-file-analysis)" data-group="ctf-reverse">
+  <h3><a href="ctf-reverse/languages-platforms/SKILL.md">languages-platforms</a></h3>
+  <p>- [Roblox Place File Analysis](#roblox-place-file-analysis)</p>
+  <div class="meta">ctf-reverse/languages-platforms/SKILL.md</div>
+</article>
+<article class="card" data-name="patterns" data-desc="- [custom vm reversing](#custom-vm-reversing)" data-group="ctf-reverse">
+  <h3><a href="ctf-reverse/patterns/SKILL.md">patterns</a></h3>
+  <p>- [Custom VM Reversing](#custom-vm-reversing)</p>
+  <div class="meta">ctf-reverse/patterns/SKILL.md</div>
+</article>
+<article class="card" data-name="patterns-ctf" data-desc="- [hidden emulator opcodes + ld_preload key extraction (0xfun 2026)](#hidden-emulator-opcodes--ld_preload-key-extraction-0xfun-2026)" data-group="ctf-reverse">
+  <h3><a href="ctf-reverse/patterns-ctf/SKILL.md">patterns-ctf</a></h3>
+  <p>- [Hidden Emulator Opcodes + LD_PRELOAD Key Extraction (0xFun 2026)](#hidden-emulator-opcodes--ld_preload-key-extraction-0xfun-2026)</p>
+  <div class="meta">ctf-reverse/patterns-ctf/SKILL.md</div>
+</article>
+<article class="card" data-name="patterns-ctf-2" data-desc="- [multi-layer self-decrypting binary (dicectf 2026)](#multi-layer-self-decrypting-binary-dicectf-2026)" data-group="ctf-reverse">
+  <h3><a href="ctf-reverse/patterns-ctf-2/SKILL.md">patterns-ctf-2</a></h3>
+  <p>- [Multi-Layer Self-Decrypting Binary (DiceCTF 2026)](#multi-layer-self-decrypting-binary-dicectf-2026)</p>
+  <div class="meta">ctf-reverse/patterns-ctf-2/SKILL.md</div>
+</article>
+<article class="card" data-name="patterns-ctf-3" data-desc="- [z3 for single-line python boolean circuit (bearcatctf 2026)](#z3-for-single-line-python-boolean-circuit-bearcatctf-2026)" data-group="ctf-reverse">
+  <h3><a href="ctf-reverse/patterns-ctf-3/SKILL.md">patterns-ctf-3</a></h3>
+  <p>- [Z3 for Single-Line Python Boolean Circuit (BearCatCTF 2026)](#z3-for-single-line-python-boolean-circuit-bearcatctf-2026)</p>
+  <div class="meta">ctf-reverse/patterns-ctf-3/SKILL.md</div>
+</article>
+<article class="card" data-name="patterns-runtime" data-desc="malware unpacking, multi-stage shellcode, timing/signal side channels, and ctf-specific oracle attacks that rely on runtime state rather than static pattern matching." data-group="ctf-reverse">
+  <h3><a href="ctf-reverse/patterns-runtime/SKILL.md">patterns-runtime</a></h3>
+  <p>Malware unpacking, multi-stage shellcode, timing/signal side channels, and CTF-specific oracle attacks that rely on runtime state rather than static pattern matching.</p>
+  <div class="meta">ctf-reverse/patterns-runtime/SKILL.md</div>
+</article>
+<article class="card" data-name="platforms" data-desc="macos/ios, embedded/iot firmware, kernel driver, automotive, and game engine reverse engineering." data-group="ctf-reverse">
+  <h3><a href="ctf-reverse/platforms/SKILL.md">platforms</a></h3>
+  <p>macOS/iOS, embedded/IoT firmware, kernel driver, automotive, and game engine reverse engineering.</p>
+  <div class="meta">ctf-reverse/platforms/SKILL.md</div>
+</article>
+<article class="card" data-name="platforms-hardware" data-desc="hd44780 lcd gpio reconstruction, risc-v advanced extensions and debugging, arm64/aarch64 reversing and exploitation." data-group="ctf-reverse">
+  <h3><a href="ctf-reverse/platforms-hardware/SKILL.md">platforms-hardware</a></h3>
+  <p>HD44780 LCD GPIO reconstruction, RISC-V advanced extensions and debugging, ARM64/AArch64 reversing and exploitation.</p>
+  <div class="meta">ctf-reverse/platforms-hardware/SKILL.md</div>
+</article>
+<article class="card" data-name="tools" data-desc="- [gdb](#gdb)" data-group="ctf-reverse">
+  <h3><a href="ctf-reverse/tools/SKILL.md">tools</a></h3>
+  <p>- [GDB](#gdb)</p>
+  <div class="meta">ctf-reverse/tools/SKILL.md</div>
+</article>
+<article class="card" data-name="tools-advanced" data-desc="advanced tooling for commercial packers/protectors, binary diffing, deobfuscation frameworks, emulation, and symbolic execution beyond angr." data-group="ctf-reverse">
+  <h3><a href="ctf-reverse/tools-advanced/SKILL.md">tools-advanced</a></h3>
+  <p>Advanced tooling for commercial packers/protectors, binary diffing, deobfuscation frameworks, emulation, and symbolic execution beyond angr.</p>
+  <div class="meta">ctf-reverse/tools-advanced/SKILL.md</div>
+</article>
+<article class="card" data-name="tools-advanced-2" data-desc="advanced gdb scripting, ghidra automation, patching frameworks, and ctf-specific gdb-driven techniques. continuation of [tools-advanced.md](../tools-advanced/skill.md)." data-group="ctf-reverse">
+  <h3><a href="ctf-reverse/tools-advanced-2/SKILL.md">tools-advanced-2</a></h3>
+  <p>Advanced GDB scripting, Ghidra automation, patching frameworks, and CTF-specific GDB-driven techniques. Continuation of [tools-advanced.md](../tools-advanced/SKILL.md).</p>
+  <div class="meta">ctf-reverse/tools-advanced-2/SKILL.md</div>
+</article>
+<article class="card" data-name="tools-dynamic" data-desc="- [frida (dynamic instrumentation)](#frida-dynamic-instrumentation)" data-group="ctf-reverse">
+  <h3><a href="ctf-reverse/tools-dynamic/SKILL.md">tools-dynamic</a></h3>
+  <p>- [Frida (Dynamic Instrumentation)](#frida-dynamic-instrumentation)</p>
+  <div class="meta">ctf-reverse/tools-dynamic/SKILL.md</div>
+</article>
+<article class="card" data-name="tools-emulation" data-desc="emulation frameworks (qiling, triton) and side-channel measurement tools (intel pin, ld_preload hooks) for ctf challenges where anti-debug, self-modifying code, or cross-architecture targets make plai" data-group="ctf-reverse">
+  <h3><a href="ctf-reverse/tools-emulation/SKILL.md">tools-emulation</a></h3>
+  <p>Emulation frameworks (Qiling, Triton) and side-channel measurement tools (Intel Pin, LD_PRELOAD hooks) for CTF challenges where anti-debug, self-modifying code, or cross-architecture targets make plai</p>
+  <div class="meta">ctf-reverse/tools-emulation/SKILL.md</div>
+</article></div>
+</section><section id="grp-ctf-web" class="group-section">
+  <h2>ctf-web <span>21 skills</span></h2>
+  <div class="grid"><article class="card" data-name="auth-and-access" data-desc="- [password/secret inference from public data](#passwordsecret-inference-from-public-data)" data-group="ctf-web">
+  <h3><a href="ctf-web/auth-and-access/SKILL.md">auth-and-access</a></h3>
+  <p>- [Password/Secret Inference from Public Data](#passwordsecret-inference-from-public-data)</p>
+  <div class="meta">ctf-web/auth-and-access/SKILL.md</div>
+</article>
+<article class="card" data-name="auth-and-access-2" data-desc="2018-era additions: bucket-collision hash auth bypass, unicode username homograph collision, srp a=0/a=n bypass, arangodb aql merge privilege escalation. for foundational auth/access techniques see [a" data-group="ctf-web">
+  <h3><a href="ctf-web/auth-and-access-2/SKILL.md">auth-and-access-2</a></h3>
+  <p>2018-era additions: bucket-collision hash auth bypass, Unicode username homograph collision, SRP A=0/A=N bypass, ArangoDB AQL MERGE privilege escalation. For foundational auth/access techniques see [a</p>
+  <div class="meta">ctf-web/auth-and-access-2/SKILL.md</div>
+</article>
+<article class="card" data-name="auth-infra" data-desc="- [oauth/oidc exploitation](#oauthoidc-exploitation)" data-group="ctf-web">
+  <h3><a href="ctf-web/auth-infra/SKILL.md">auth-infra</a></h3>
+  <p>- [OAuth/OIDC Exploitation](#oauthoidc-exploitation)</p>
+  <div class="meta">ctf-web/auth-infra/SKILL.md</div>
+</article>
+<article class="card" data-name="auth-jwt" data-desc="- [algorithm none](#algorithm-none)" data-group="ctf-web">
+  <h3><a href="ctf-web/auth-jwt/SKILL.md">auth-jwt</a></h3>
+  <p>- [Algorithm None](#algorithm-none)</p>
+  <div class="meta">ctf-web/auth-jwt/SKILL.md</div>
+</article>
+<article class="card" data-name="client-side" data-desc="- [xss payloads](#xss-payloads)" data-group="ctf-web">
+  <h3><a href="ctf-web/client-side/SKILL.md">client-side</a></h3>
+  <p>- [XSS Payloads](#xss-payloads)</p>
+  <div class="meta">ctf-web/client-side/SKILL.md</div>
+</article>
+<article class="card" data-name="client-side-advanced" data-desc="unicode bypass, css-only exfiltration, behavioral js frameworks, timing oracles, hmac bypass, csp bypasses, and xssi techniques." data-group="ctf-web">
+  <h3><a href="ctf-web/client-side-advanced/SKILL.md">client-side-advanced</a></h3>
+  <p>Unicode bypass, CSS-only exfiltration, behavioral JS frameworks, timing oracles, HMAC bypass, CSP bypasses, and XSSI techniques.</p>
+  <div class="meta">ctf-web/client-side-advanced/SKILL.md</div>
+</article>
+<article class="card" data-name="ctf-web" data-desc="provides web exploitation techniques for ctf challenges. use when the target is primarily an http application, api, browser client, template engine, identity flow, or smart-contract frontend/backend surface, including xss, sqli, ssti, ssrf, xxe, jwt, auth bypass, file upload, request smuggling, oauth/oidc, saml, prototype pollution, and similar web bugs. do not use it for native binary memory corruption, reverse engineering of standalone executables, disk or memory forensics, or pure cryptanalysis unless the web flaw is still the main path to the flag." data-group="ctf-web">
+  <h3><a href="ctf-web/SKILL.md">ctf-web</a></h3>
+  <p>Provides web exploitation techniques for CTF challenges. Use when the target is primarily an HTTP application, API, browser client, template engine, identity flow, or smart-contract frontend/backend surface, including XSS, SQLi, SSTI, SSRF, XXE, JWT, auth bypass, file upload, request smuggling, OAuth/OIDC, SAML, prototype pollution, and similar web bugs. Do not use it for native binary memory corruption, reverse engineering of standalone executables, disk or memory forensics, or pure cryptanalysis unless the web flaw is still the main path to the flag.</p>
+  <div class="meta">ctf-web/SKILL.md</div>
+</article>
+<article class="card" data-name="cves" data-desc="specific cves and vulnerability patterns. for node.js cves (flatnest, happy-dom), see [node-and-prototype.md](../node-and-prototype/skill.md). for jwt algorithm confusion, see [auth-and-access.md](auth-and-acc" data-group="ctf-web">
+  <h3><a href="ctf-web/cves/SKILL.md">cves</a></h3>
+  <p>Specific CVEs and vulnerability patterns. For Node.js CVEs (flatnest, Happy-DOM), see [node-and-prototype.md](../node-and-prototype/SKILL.md). For JWT algorithm confusion, see [auth-and-access.md](auth-and-acc</p>
+  <div class="meta">ctf-web/cves/SKILL.md</div>
+</article>
+<article class="card" data-name="field-notes" data-desc="long-form exploit notes that were moved out of `skill.md` so the main skill can stay focused on routing and first-pass execution." data-group="ctf-web">
+  <h3><a href="ctf-web/field-notes/SKILL.md">field-notes</a></h3>
+  <p>Long-form exploit notes that were moved out of `SKILL.md` so the main skill can stay focused on routing and first-pass execution.</p>
+  <div class="meta">ctf-web/field-notes/SKILL.md</div>
+</article>
+<article class="card" data-name="node-and-prototype" data-desc="- [prototype pollution basics](#prototype-pollution-basics)" data-group="ctf-web">
+  <h3><a href="ctf-web/node-and-prototype/SKILL.md">node-and-prototype</a></h3>
+  <p>- [Prototype Pollution Basics](#prototype-pollution-basics)</p>
+  <div class="meta">ctf-web/node-and-prototype/SKILL.md</div>
+</article>
+<article class="card" data-name="server-side" data-desc="- [php type juggling](#php-type-juggling)" data-group="ctf-web">
+  <h3><a href="ctf-web/server-side/SKILL.md">server-side</a></h3>
+  <p>- [PHP Type Juggling](#php-type-juggling)</p>
+  <div class="meta">ctf-web/server-side/SKILL.md</div>
+</article>
+<article class="card" data-name="server-side-2" data-desc="xxe payloads, xml injection, php variable-variable tricks, sequential regex bypasses, command injection, and graphql exploitation. for core server-side injection (php type juggling, file inclusion, ss" data-group="ctf-web">
+  <h3><a href="ctf-web/server-side-2/SKILL.md">server-side-2</a></h3>
+  <p>XXE payloads, XML injection, PHP variable-variable tricks, sequential regex bypasses, command injection, and GraphQL exploitation. For core server-side injection (PHP type juggling, file inclusion, SS</p>
+  <div class="meta">ctf-web/server-side-2/SKILL.md</div>
+</article>
+<article class="card" data-name="server-side-advanced" data-desc="- [exiftool cve-2021-22204 — djvu perl injection (0xfun 2026)](#exiftool-cve-2021-22204--djvu-perl-injection-0xfun-2026)" data-group="ctf-web">
+  <h3><a href="ctf-web/server-side-advanced/SKILL.md">server-side-advanced</a></h3>
+  <p>- [ExifTool CVE-2021-22204 — DjVu Perl Injection (0xFun 2026)](#exiftool-cve-2021-22204--djvu-perl-injection-0xfun-2026)</p>
+  <div class="meta">ctf-web/server-side-advanced/SKILL.md</div>
+</article>
+<article class="card" data-name="server-side-advanced-2" data-desc="- [ssrf to docker api rce chain (h7ctf 2025)](#ssrf-to-docker-api-rce-chain-h7ctf-2025)" data-group="ctf-web">
+  <h3><a href="ctf-web/server-side-advanced-2/SKILL.md">server-side-advanced-2</a></h3>
+  <p>- [SSRF to Docker API RCE Chain (H7CTF 2025)](#ssrf-to-docker-api-rce-chain-h7ctf-2025)</p>
+  <div class="meta">ctf-web/server-side-advanced-2/SKILL.md</div>
+</article>
+<article class="card" data-name="server-side-advanced-3" data-desc="cve-era and 2018-era advanced server-side techniques (csaw, 35c3, asis, plaidctf). for parts 1-2, see [server-side-advanced.md](../server-side-advanced/skill.md) and [server-side-advanced-2.md](server-side-adv" data-group="ctf-web">
+  <h3><a href="ctf-web/server-side-advanced-3/SKILL.md">server-side-advanced-3</a></h3>
+  <p>CVE-era and 2018-era advanced server-side techniques (CSAW, 35C3, ASIS, PlaidCTF). For parts 1-2, see [server-side-advanced.md](../server-side-advanced/SKILL.md) and [server-side-advanced-2.md](server-side-adv</p>
+  <div class="meta">ctf-web/server-side-advanced-3/SKILL.md</div>
+</article>
+<article class="card" data-name="server-side-advanced-4" data-desc="- [weasyprint ssrf &amp; file read (cve-2024-28184, nullcon 2026)](#weasyprint-ssrf--file-read-cve-2024-28184-nullcon-2026)" data-group="ctf-web">
+  <h3><a href="ctf-web/server-side-advanced-4/SKILL.md">server-side-advanced-4</a></h3>
+  <p>- [WeasyPrint SSRF &amp; File Read (CVE-2024-28184, Nullcon 2026)](#weasyprint-ssrf--file-read-cve-2024-28184-nullcon-2026)</p>
+  <div class="meta">ctf-web/server-side-advanced-4/SKILL.md</div>
+</article>
+<article class="card" data-name="server-side-deser" data-desc="for core injection attacks (sqli, ssti, ssrf, xxe, command injection), see [server-side.md](../server-side/skill.md)." data-group="ctf-web">
+  <h3><a href="ctf-web/server-side-deser/SKILL.md">server-side-deser</a></h3>
+  <p>For core injection attacks (SQLi, SSTI, SSRF, XXE, command injection), see [server-side.md](../server-side/SKILL.md).</p>
+  <div class="meta">ctf-web/server-side-deser/SKILL.md</div>
+</article>
+<article class="card" data-name="server-side-exec" data-desc="- [ruby code injection](#ruby-code-injection)" data-group="ctf-web">
+  <h3><a href="ctf-web/server-side-exec/SKILL.md">server-side-exec</a></h3>
+  <p>- [Ruby Code Injection](#ruby-code-injection)</p>
+  <div class="meta">ctf-web/server-side-exec/SKILL.md</div>
+</article>
+<article class="card" data-name="server-side-exec-2" data-desc="- [sqli keyword fragmentation bypass (secuinside 2013)](#sqli-keyword-fragmentation-bypass-secuinside-2013)" data-group="ctf-web">
+  <h3><a href="ctf-web/server-side-exec-2/SKILL.md">server-side-exec-2</a></h3>
+  <p>- [SQLi Keyword Fragmentation Bypass (SecuInside 2013)](#sqli-keyword-fragmentation-bypass-secuinside-2013)</p>
+  <div class="meta">ctf-web/server-side-exec-2/SKILL.md</div>
+</article>
+<article class="card" data-name="sql-injection" data-desc="comprehensive sql injection techniques for ctf challenges. for other server-side attacks (ssti, ssrf, xxe, command injection, graphql), see [server-side.md](../server-side/skill.md)." data-group="ctf-web">
+  <h3><a href="ctf-web/sql-injection/SKILL.md">sql-injection</a></h3>
+  <p>Comprehensive SQL injection techniques for CTF challenges. For other server-side attacks (SSTI, SSRF, XXE, command injection, GraphQL), see [server-side.md](../server-side/SKILL.md).</p>
+  <div class="meta">ctf-web/sql-injection/SKILL.md</div>
+</article>
+<article class="card" data-name="web3" data-desc="- [challenge infrastructure pattern](#challenge-infrastructure-pattern)" data-group="ctf-web">
+  <h3><a href="ctf-web/web3/SKILL.md">web3</a></h3>
+  <p>- [Challenge Infrastructure Pattern](#challenge-infrastructure-pattern)</p>
+  <div class="meta">ctf-web/web3/SKILL.md</div>
+</article></div>
+</section><section id="grp-ctf-writeup" class="group-section">
+  <h2>ctf-writeup <span>1 skills</span></h2>
+  <div class="grid"><article class="card" data-name="ctf-writeup" data-desc="generates a single standardized submission-style ctf writeup for competition handoff and organizer review. use after solving a ctf challenge to document the solution steps, tools used, and lessons learned in a structured format." data-group="ctf-writeup">
+  <h3><a href="ctf-writeup/SKILL.md">ctf-writeup</a></h3>
+  <p>Generates a single standardized submission-style CTF writeup for competition handoff and organizer review. Use after solving a CTF challenge to document the solution steps, tools used, and lessons learned in a structured format.</p>
+  <div class="meta">ctf-writeup/SKILL.md</div>
+</article></div>
+</section><section id="grp-readme" class="group-section">
+  <h2>readme <span>1 skills</span></h2>
+  <div class="grid"><article class="card" data-name="readme" data-desc="[agent skills](https://agentskills.io) for solving ctf challenges — web exploitation, binary pwn, crypto, reverse engineering, forensics, osint, and more. works with any tool that supports the agent s" data-group="readme">
+  <h3><a href="readme/SKILL.md">readme</a></h3>
+  <p>[Agent Skills](https://agentskills.io) for solving CTF challenges — web exploitation, binary pwn, crypto, reverse engineering, forensics, OSINT, and more. Works with any tool that supports the Agent S</p>
+  <div class="meta">readme/SKILL.md</div>
+</article></div>
+</section><section id="grp-security" class="group-section">
+  <h2>security <span>1 skills</span></h2>
+  <div class="grid"><article class="card" data-name="security" data-desc="this repository contains offensive security techniques documented for **authorized ctf (capture the flag) competitions, security research, and education**. the techniques described — including exploit" data-group="security">
+  <h3><a href="security/SKILL.md">security</a></h3>
+  <p>This repository contains offensive security techniques documented for **authorized CTF (Capture The Flag) competitions, security research, and education**. The techniques described — including exploit</p>
+  <div class="meta">security/SKILL.md</div>
+</article></div>
+</section><section id="grp-solve-challenge" class="group-section">
+  <h2>solve-challenge <span>1 skills</span></h2>
+  <div class="grid"><article class="card" data-name="solve-challenge" data-desc="solves ctf challenges by performing first-pass triage, identifying the dominant category, and routing execution to the right specialized ctf-* skill. use when the user gives you a challenge bundle, a remote service, a suspicious file, or only a vague challenge description and you must determine where to start. do not use it when the category is already clear and a specialized skill can be invoked directly; this is the dispatcher and recon entrypoint, not the deepest reference for category-specific techniques." data-group="solve-challenge">
+  <h3><a href="solve-challenge/SKILL.md">solve-challenge</a></h3>
+  <p>Solves CTF challenges by performing first-pass triage, identifying the dominant category, and routing execution to the right specialized ctf-* skill. Use when the user gives you a challenge bundle, a remote service, a suspicious file, or only a vague challenge description and you must determine where to start. Do not use it when the category is already clear and a specialized skill can be invoked directly; this is the dispatcher and recon entrypoint, not the deepest reference for category-specific techniques.</p>
+  <div class="meta">solve-challenge/SKILL.md</div>
+</article></div>
+</section>
+  </div>
+  <script>
+    const q = document.getElementById('q');
+    const cards = [...document.querySelectorAll('.card')];
+    const groups = [...document.querySelectorAll('.group-section')];
+    const count = document.getElementById('count');
+
+    function refresh() {
+      const needle = q.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const hay = [card.dataset.name, card.dataset.desc, card.dataset.group].join(' ');
+        const show = !needle || hay.includes(needle);
+        card.classList.toggle('hidden', !show);
+        if (show) visible += 1;
+      });
+      groups.forEach(g => {
+        const any = g.querySelector('.card:not(.hidden)');
+        g.classList.toggle('hidden', !any);
+      });
+      count.textContent = `Mostrando ${visible} skills`;
+    }
+
+    q.addEventListener('input', refresh);
+  </script>
+</body>
+</html>
