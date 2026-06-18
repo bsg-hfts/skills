@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -uo pipefail
 
+export PATH="/usr/sbin:${PATH}"
+
 # Smoke-test tool availability.
 # - CLI tools: run with --help (fallback -h) to verify they are callable.
 # - Python libraries without CLI: verify import in the shared venv.
@@ -99,7 +101,13 @@ run_help_check "tshark" "tshark"
 run_help_check "ffmpeg" "ffmpeg"
 run_help_check "steghide" "steghide"
 run_help_check "testdisk" "testdisk"
-run_help_check "john" "john"
+if command -v john >/dev/null 2>&1; then
+  run_help_check "john" "john"
+elif [[ -x /usr/sbin/john ]]; then
+  run_help_check "john" "/usr/sbin/john"
+else
+  print_missing "john (john not in PATH and /usr/sbin/john missing)"
+fi
 run_help_check "nmap" "nmap"
 run_help_check "whois" "whois"
 run_help_check "dig" "dig"
