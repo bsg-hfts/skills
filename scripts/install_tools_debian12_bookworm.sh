@@ -19,10 +19,10 @@ APT_PACKAGES=(
   python3 python3-venv python3-pip python3-dev build-essential
   git curl wget ca-certificates jq
   ruby ruby-dev
-  gdb radare2 binutils binwalk foremost libimage-exiftool-perl
+  gdb binutils binwalk foremost libimage-exiftool-perl
   tshark sleuthkit ffmpeg steghide testdisk john pcapfix
   nmap whois dnsutils hashcat strace ltrace imagemagick
-  apktool upx qemu-system-x86 sagemath qrencode
+  apktool qemu-system-x86 sagemath qrencode
   ffuf
   libgmp-dev libmpc-dev libmpfr-dev
   libffi-dev libssl-dev
@@ -93,6 +93,24 @@ for pkg in "${APT_PACKAGES[@]}"; do
     APT_MISSING+=("$pkg")
   fi
 done
+
+# Kali/Bookworm compatibility fallbacks.
+if apt_has_candidate "radare2"; then
+  APT_AVAILABLE+=("radare2")
+elif apt_has_candidate "rizin"; then
+  APT_AVAILABLE+=("rizin")
+else
+  APT_MISSING+=("radare2" "rizin")
+fi
+
+if apt_has_candidate "upx"; then
+  APT_AVAILABLE+=("upx")
+elif apt_has_candidate "upx-ucl"; then
+  APT_AVAILABLE+=("upx-ucl")
+else
+  APT_MISSING+=("upx" "upx-ucl")
+fi
+
 if [[ ${#APT_AVAILABLE[@]} -gt 0 ]]; then
   apt-get install -y --no-install-recommends "${APT_AVAILABLE[@]}"
 fi
@@ -155,10 +173,23 @@ check_cmd() {
   fi
 }
 
+check_any_cmd() {
+  local label="$1"
+  shift
+  local alt
+  for alt in "$@"; do
+    if command -v "$alt" >/dev/null 2>&1; then
+      printf "  [OK] %s -> %s\n" "$label" "$(command -v "$alt")"
+      return 0
+    fi
+  done
+  printf "  [MISSING] %s\n" "$label"
+}
+
 check_cmd python3
 check_cmd pip3
 check_cmd gdb
-check_cmd r2
+check_any_cmd "r2/rz" r2 rz
 check_cmd objdump
 check_cmd binwalk
 check_cmd exiftool
@@ -175,7 +206,7 @@ check_cmd strace
 check_cmd ltrace
 check_cmd convert
 check_cmd apktool
-check_cmd upx
+check_any_cmd "upx/upx-ucl" upx upx-ucl
 check_cmd qemu-system-x86_64
 check_cmd sage
 check_cmd qrencode
