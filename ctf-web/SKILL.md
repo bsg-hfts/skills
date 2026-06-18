@@ -87,6 +87,9 @@ go install github.com/ffuf/ffuf/v2@latest
 - [xss-automation.md](xss-automation/SKILL.md) - Automated XSS discovery with Dalfox and XSStrike for fast sink validation
 - [xss-automation-and-validation.md](xss-automation-and-validation/SKILL.md) - XSser/XSStrike workflow to classify contexts and reduce false positives on reflected/stored/DOM XSS
 - [web-scanner-orchestration.md](web-scanner-orchestration/SKILL.md) - Coordinated toolchain sequence (fingerprint -> discovery -> exposure -> exploit validation)
+- [web-recon-cli-stack.md](web-recon-cli-stack/SKILL.md) - Operational playbook for WhatWeb, WAFW00F, Nikto, Gobuster, and FFUF with low-noise recon decisions
+- [nuclei-targeted-workflows.md](nuclei-targeted-workflows/SKILL.md) - Targeted Nuclei strategy with template updates, severity/tag filtering, and reproducible triage
+- [playwright-and-xsstrike-validation.md](playwright-and-xsstrike-validation/SKILL.md) - Browser-backed XSS validation using XSStrike plus Playwright/Chromium
 
 - [sql-injection.md](sql-injection/SKILL.md) - SQL injection techniques: auth bypass, UNION extraction, filter bypasses, second-order SQLi, truncation, race-assisted leaks, INSERT ON DUPLICATE KEY UPDATE password overwrite, innodb_table_stats WAF bypass
 - [server-side.md](server-side/SKILL.md) - PHP type juggling, php://filter LFI, Python str.format traversal, SSTI (Jinja2, Twig, ERB, Mako, EJS, Vue.js, Smarty), SSRF (Host header, DNS rebinding, curl redirect, unescaped-dot regex, SNI FTP smuggling, mod_vhost_alias), PHP hash_hmac NULL
