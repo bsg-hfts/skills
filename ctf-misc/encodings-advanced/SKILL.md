@@ -62,6 +62,11 @@ Sigue los pasos y referencias del contenido base de esta habilidad.
 - [Music Note Interval Steganography (DefCamp 2017)](#music-note-interval-steganography-defcamp-2017)
 - [Ruby Array#unpack Buffer Under-Read CVE-2018-8778 (Codegate 2019)](#ruby-arrayunpack-buffer-under-read-cve-2018-8778-codegate-2019)
 - [Binary Grid Text to QR Image + XOR Key (Pragyan CTF 2019)](#binary-grid-text-to-qr-image--xor-key-pragyan-ctf-2019)
+- [CTF Token Reverse Engineering: Multi-Layer Encoding Cascade](#ctf-token-reverse-engineering-multi-layer-encoding-cascade)
+  - [Encoding Identification Cheatsheet](#encoding-identification-cheatsheet)
+  - [Universal Cascade Solver](#universal-cascade-solver)
+  - [Developer-Name PRNG Brute-Force](#developer-name-prng-brute-force)
+  - [Common Juice Shop Token Patterns](#common-juice-shop-token-patterns)
 
 ---
 
@@ -548,3 +553,244 @@ print(pt)
 **Key insight:** Binary-grid text files are often "render me" puzzles — one pixel per bit, scale by 4-8x so `zbarimg`/`pyzbar` can find the finder patterns. If the decoded bytes are printable-ish but nonsense (e.g. `9YQ8S_VY^`), try short repeating-key XOR with the word `flag`, the CTF name, or `ctf{` — XORing the first 5 bytes of ciphertext with `pctf{` recovers the key immediately.
 
 **References:** Pragyan CTF 2019 — EXORcism, writeup 13835
+
+---
+
+## CTF Token Reverse Engineering: Multi-Layer Encoding Cascade
+
+**Pattern:** Juice Shop Easter Eggs, premium codes, and challenge tokens often use sequential encoding layers: Base64 → ROT13 → Base85 → XOR, or similar combinations. The encoded string is embedded in HTML comments, JavaScript source, or API responses. No single decoder works — you must identify and strip each layer.
+
+### Encoding Identification Cheatsheet
+
+| Pattern | Encoding |
+|---------|----------|
+| `[A-Za-z0-9+/]{N}={0,2}` | Base64 |
+| `[A-Z2-7]{N}={0,6}` | Base32 |
+| `[0-9A-F]+` (even len) | Hex |
+| Letters shifted by 13 | ROT13 |
+| Letters shifted by N | Caesar |
+| `<~...~>` or printable chars 33-117 | Base85 (Ascii85) |
+| `[A-Za-z0-9!#$%&()*+-;<=>?@^_` + `` ` `` + `{|}~]{N}` | Base85 (RFC 1924) |
+| Binary-looking printable noise | XOR with short key |
+| `0x`-prefixed or pure hex blob | Hex |
+| URL-safe: `[A-Za-z0-9_-]+={0,2}` | Base64url |
+
+### Universal Cascade Solver
+
+```python
+import base64, codecs, struct, binascii, re, itertools
+
+def try_base64(data):
+    if isinstance(data, str):
+        data = data.strip()
+        # Pad if needed
+        pad = 4 - len(data) % 4
+        if pad < 4:
+            data += '=' * pad
+    return base64.b64decode(data)
+
+def try_base64url(data):
+    if isinstance(data, str):
+        data = data.strip().replace('-', '+').replace('_', '/')
+        pad = 4 - len(data) % 4
+        if pad < 4:
+            data += '=' * pad
+    return base64.b64decode(data)
+
+def try_base32(data):
+    if isinstance(data, str):
+        data = data.strip().upper()
+        pad = 8 - len(data) % 8
+        if pad < 8:
+            data += '=' * pad
+    return base64.b32decode(data)
+
+def try_hex(data):
+    s = data.strip() if isinstance(data, str) else data.decode()
+    s = s.replace(' ', '').replace('0x', '')
+    return bytes.fromhex(s)
+
+def try_rot13(data):
+    s = data if isinstance(data, str) else data.decode()
+    return codecs.decode(s, 'rot_13')
+
+def try_base85(data):
+    s = data.strip() if isinstance(data, str) else data.decode().strip()
+    # Ascii85 (Postscript)
+    if s.startswith('<~') and s.endswith('~>'):
+        return base64.a85decode(s)
+    # Python-style base85 (RFC 1924)
+    return base64.b85decode(s)
+
+def try_caesar_all(data):
+    """Return all 25 Caesar shifts"""
+    s = data if isinstance(data, str) else data.decode('latin-1')
+    results = []
+    for shift in range(1, 26):
+        shifted = ''.join(
+            chr((ord(c) - (65 if c.isupper() else 97) + shift) % 26 + (65 if c.isupper() else 97))
+            if c.isalpha() else c
+            for c in s
+        )
+        results.append((shift, shifted))
+    return results
+
+def try_xor_single(data, key=None):
+    """Try single-byte XOR, or XOR with known key"""
+    b = data if isinstance(data, bytes) else data.encode()
+    if key is not None:
+        k = key if isinstance(key, bytes) else key.encode()
+        return bytes(b[i] ^ k[i % len(k)] for i in range(len(b)))
+    # Brute force single-byte
+    results = []
+    for k in range(256):
+        decrypted = bytes(byte ^ k for byte in b)
+        if all(32 <= byte <= 126 for byte in decrypted):
+            results.append((k, decrypted))
+    return results
+
+DECODERS = [
+    ('base64',    try_base64),
+    ('base64url', try_base64url),
+    ('base32',    try_base32),
+    ('hex',       try_hex),
+    ('rot13',     try_rot13),
+    ('base85',    try_base85),
+]
+
+def is_printable(data):
+    if isinstance(data, bytes):
+        return all(32 <= b <= 126 or b in (9, 10, 13) for b in data)
+    return all(32 <= ord(c) <= 126 for c in data)
+
+def cascade_decode(token, max_layers=10, verbose=True):
+    """Attempt to decode a token through multiple encoding layers"""
+    current = token
+    history = []
+
+    for layer in range(max_layers):
+        decoded = None
+        method = None
+
+        for name, decoder in DECODERS:
+            try:
+                result = decoder(current)
+                if result and len(result) > 0:
+                    # Accept if result is printable or binary (for further decoding)
+                    decoded = result
+                    method = name
+                    break
+            except Exception:
+                continue
+
+        if decoded is None:
+            if verbose:
+                print(f"[Layer {layer}] Cannot decode further. Final: {current!r}")
+            break
+
+        if isinstance(decoded, bytes):
+            try:
+                decoded_str = decoded.decode('utf-8')
+                decoded = decoded_str
+            except UnicodeDecodeError:
+                pass
+
+        history.append((method, decoded))
+        if verbose:
+            preview = str(decoded)[:80]
+            print(f"[Layer {layer}] {method}: {preview}")
+
+        if current == decoded:  # No change — stop
+            break
+        current = decoded
+
+    return current, history
+
+# Example: decode a Juice Shop-style Easter Egg token
+token = "L2dvbzFzaG9w"  # example multi-layer token
+result, steps = cascade_decode(token)
+print(f"\nFinal: {result}")
+```
+
+### Developer-Name PRNG Brute-Force
+
+```python
+# Pattern: JWT secret or API token seeded from developer name or app info
+# Common in CTFs: secret = sha256(devname), or secret = devname + year
+
+import hashlib, requests, base64, hmac
+
+# Candidates from OSINT: check GitHub commits, package.json author, README, HTML comments
+dev_names = [
+    "admin", "administrator", "root", "juice", "juiceshop", "juice-shop",
+    "bjoern", "bjoernkimminich", "apple", "banana", "orange",
+    "password", "secret", "letmein", "trustno1", "12345678",
+]
+
+# Also generate date-based seeds
+import datetime
+today = datetime.date.today()
+for i in range(365):
+    d = today - datetime.timedelta(days=i)
+    dev_names.append(d.strftime("%Y-%m-%d"))
+    dev_names.append(d.strftime("%d%m%Y"))
+
+def crack_jwt_hs256(token, wordlist):
+    """Try to crack JWT HS256 secret from wordlist"""
+    header_b64, payload_b64, sig_b64 = token.split('.')
+    sig_bytes = base64.urlsafe_b64decode(sig_b64 + '==')
+    signing_input = f"{header_b64}.{payload_b64}".encode()
+
+    for candidate in wordlist:
+        key = candidate.encode() if isinstance(candidate, str) else candidate
+        computed = hmac.new(key, signing_input, hashlib.sha256).digest()
+        if computed == sig_bytes:
+            print(f"[FOUND] Secret: {candidate}")
+            return candidate
+        # Also try sha256 of the name as key
+        key_hashed = hashlib.sha256(key).digest()
+        computed2 = hmac.new(key_hashed, signing_input, hashlib.sha256).digest()
+        if computed2 == sig_bytes:
+            print(f"[FOUND] Secret (sha256'd): {candidate}")
+            return candidate
+    print("[NOT FOUND] Try expanding wordlist")
+    return None
+
+# Usage
+# jwt_token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiJ9.XXXX"
+# crack_jwt_hs256(jwt_token, dev_names)
+```
+
+### Common Juice Shop Token Patterns
+
+```python
+# Juice Shop encodes some routes and Easter Eggs with:
+# 1. Base64 URL encoding of path
+# 2. ROT13 of the above
+# 3. Base64 again
+
+def juice_shop_encode(path):
+    step1 = base64.b64encode(path.encode()).decode()
+    step2 = codecs.encode(step1, 'rot_13')
+    step3 = base64.b64encode(step2.encode()).decode()
+    return step3
+
+def juice_shop_decode(token):
+    step1 = base64.b64decode(token).decode()
+    step2 = codecs.decode(step1, 'rot_13')
+    step3 = base64.b64decode(step2).decode()
+    return step3
+
+# Scan HTML source for encoded paths
+import re, urllib.request
+
+def find_tokens_in_page(url):
+    with urllib.request.urlopen(url) as r:
+        html = r.read().decode('utf-8', errors='replace')
+    # Look for base64-like strings in HTML comments, data attributes, or JS
+    tokens = re.findall(r'[A-Za-z0-9+/]{20,}={0,2}', html)
+    for t in set(tokens):
+        result, _ = cascade_decode(t, verbose=False)
+        if result != t and any(c in str(result) for c in ['/', 'http', '.js', 'flag', 'ctf']):
+            print(f"[TOKEN] {t[:30]}... → {str(result)[:60]}")
+```

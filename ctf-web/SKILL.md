@@ -91,6 +91,7 @@ go install github.com/ffuf/ffuf/v2@latest
 - [web-recon-cli-stack.md](web-recon-cli-stack/SKILL.md) - Operational playbook for WhatWeb, WAFW00F, Nikto, Gobuster, and FFUF with low-noise recon decisions
 - [nuclei-targeted-workflows.md](nuclei-targeted-workflows/SKILL.md) - Targeted Nuclei strategy with template updates, severity/tag filtering, and reproducible triage
 - [playwright-and-xsstrike-validation.md](playwright-and-xsstrike-validation/SKILL.md) - Browser-backed XSS validation using XSStrike plus Playwright/Chromium
+- [spa-frontend-analysis.md](spa-frontend-analysis/SKILL.md) - SPA bundle reverse engineering: Angular/React/Vue route extraction, orphaned admin paths, secret hunting in minified JS, source map exploitation, Angular guard bypass
 
 - [sql-injection.md](sql-injection/SKILL.md) - SQL injection techniques: auth bypass, UNION extraction, filter bypasses, second-order SQLi, truncation, race-assisted leaks, INSERT ON DUPLICATE KEY UPDATE password overwrite, innodb_table_stats WAF bypass
 - [server-side.md](server-side/SKILL.md) - PHP type juggling, php://filter LFI, Python str.format traversal, SSTI (Jinja2, Twig, ERB, Mako, EJS, Vue.js, Smarty), SSRF (Host header, DNS rebinding, curl redirect, unescaped-dot regex, SNI FTP smuggling, mod_vhost_alias), PHP hash_hmac NULL
@@ -103,8 +104,8 @@ go install github.com/ffuf/ffuf/v2@latest
 - [server-side-advanced-3.md](server-side-advanced-3/SKILL.md) - Part 3 (CSAW/35C3/ASIS/PlaidCTF 2018): WAV polyglot upload, multi-slash URL `path.startswith` bypass, Xalan XSLT `math:random()` seed guess, SoapClient `_user_agent` CRLF method smuggling, `gopher:///` no-host URL scheme bypass, SSRF credential leak via attacker-specified outbound URL
 - [server-side-advanced-4.md](server-side-advanced-4/SKILL.md) - Part 4: WeasyPrint SSRF/file read (CVE-2024-28184), MongoDB regex/$where blind oracle, Pongo2 Go template injection, ZIP PHP webshell, basename() bypass, wget CRLF SSRF→SMTP, Gopher SSRF to MySQL blind SQLi, React Server Components Flight RCE (CVE-2025-55182), AMQP/TLS interception via sslsplit+arpspoof, CairoSVG XXE, Bazaar repo reconstruction
 - [client-side.md](client-side/SKILL.md) - XSS, CSRF, cache poisoning, DOM tricks, admin bot abuse, request smuggling, paywall bypass
-- [client-side-advanced.md](client-side-advanced/SKILL.md) - CSP bypasses, Unicode tricks, XSSI, CSS exfiltration, browser normalization quirks, postMessage null origin bypass
-- [auth-and-access.md](auth-and-access/SKILL.md) - Auth/authz bypasses, hidden endpoints, IDOR, redirect chains, subdomain takeover, AI chatbot jailbreaks
+- [client-side-advanced.md](client-side-advanced/SKILL.md) - CSP bypasses, Unicode tricks, XSSI, CSS exfiltration, browser normalization quirks, postMessage null origin bypass, clickjacking and UI redressing, CSS attribute selector token exfiltration
+- [auth-and-access.md](auth-and-access/SKILL.md) - Auth/authz bypasses, hidden endpoints, IDOR, NoSQL injection (MongoDB $ne/$gt/$in/$regex/$where operators), redirect chains, subdomain takeover, AI chatbot jailbreaks
 - [auth-and-access-2.md](auth-and-access-2/SKILL.md) - Part 2 (2018-era): `std::unordered_set` bucket collision auth bypass, `nodeprep.prepare` Unicode homograph username collision, SRP A=0/A=N auth bypass, ArangoDB AQL MERGE privilege escalation
 - [auth-jwt.md](auth-jwt/SKILL.md) - JWT/JWE manipulation, weak secrets, header injection, key confusion, replay
 - [auth-infra.md](auth-infra/SKILL.md) - OAuth/OIDC, SAML, CORS, CI/CD secrets, IdP abuse, login poisoning
@@ -112,6 +113,7 @@ go install github.com/ffuf/ffuf/v2@latest
 - [web3.md](web3/SKILL.md) - Solidity and Web3 challenge notes
 - [cves.md](cves/SKILL.md) - CVE-driven techniques you can match against challenge banners, headers, dependency leaks, or version strings
 - [field-notes.md](field-notes/SKILL.md) - Long-form exploit notes: quick references for SQLi, XSS, LFI, JWT, SSTI, SSRF, command injection, XXE, deserialization, race conditions, auth bypass, and multi-stage chains
+- [business-logic.md](business-logic/SKILL.md) - Business logic and e-commerce exploitation: negative quantity/price attacks, coupon abuse, race conditions in financial flows (wallet double-spend, coupon replay), currency manipulation, mass assignment, SCA/CVE cross-reference via package.json
 
 ## When to Pivot
 

