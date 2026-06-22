@@ -55,7 +55,7 @@ go install github.com/ffuf/ffuf/v2@latest
 2. Enumeracion de rutas con una wordlist corta.
 3. Enumeracion de extensiones relevantes (.php, .jsp, .aspx, .js, .bak, .old).
 4. Enumeracion de parametros y vhosts.
-5. Verificacion manual en Burp headless/curl de hallazgos criticos.
+5. Verificacion manual en mitmdump/curl de hallazgos criticos.
 
 ### Quick Commands
 

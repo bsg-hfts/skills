@@ -106,7 +106,7 @@ bash scripts/install_ctf_tools.sh --verify
 
 Use `--force` to reinstall everything regardless of what's already present. Install logs are saved to `~/.ctf-tools/`.
 
-The full package lists now live in [scripts/install_ctf_tools.sh](scripts/install_ctf_tools.sh).
+The full package lists now live in [install_ctf_tools.sh](../scripts/install_ctf_tools.sh).
 
 ### On-demand (during challenges)
 
@@ -138,7 +138,7 @@ Skills are loaded automatically based on context. You can also invoke the orches
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup and contribution guidelines.
+Contribution guidelines are not published as a standalone file in this workspace yet.
 
 ## License
 

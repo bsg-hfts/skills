@@ -33,7 +33,7 @@ Objetivo: coordinar escaneres sin perder trazabilidad ni generar ruido inutil.
 2. Discovery: ffuf/feroxbuster con wordlist corta.
 3. Exposure sweep: nuclei targeted templates.
 4. Endpoint deepening: sqlmap/commix/jwttool segun hallazgo.
-5. Manual validation: Burp headless (sin GUI) + curl/HTTPie.
+5. Manual validation: mitmdump + curl/HTTPie.
 
 ### Minimal Script Pattern
 

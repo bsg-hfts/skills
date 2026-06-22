@@ -40,7 +40,7 @@ Sigue los pasos y referencias del contenido base de esta habilidad.
 - Objetivo inicial: confirmar una primitiva web pequeña (read, bypass o SSRF interno) antes de cadenas largas.
 - Orden recomendado: recon de superficie -> validacion de input sink -> PoC minimo -> escalado.
 - Tiempo maximo por hipotesis: 10-15 minutos; si no hay señal, pivota a otro bug family.
-- Salida minima util: request reproducible (raw curl/Burp headless (sin GUI)), respuesta esperada y condicion de exito.
+- Salida minima util: request reproducible (raw curl/mitmdump), respuesta esperada y condicion de exito.
 
 ## Contenido base
 
@@ -464,7 +464,7 @@ mitmproxy --mode transparent --listen-port 1234 --ssl-insecure \
           --tcp-hosts 172.30.0.2 --tcp-hosts 172.30.0.4
 ```
 
-**Key insight:** Clients without certificate pinning accept any CA-signed cert; sslsplit terminates TLS and forwards plaintext to its log, so any TLS-wrapped protocol (AMQP, IRC, MQTT, LDAPS, custom binary) becomes observable and — with a trivial mitmproxy patch — modifiable. Burp and mitmproxy focus on HTTPS; for arbitrary protocols, reach for sslsplit/sslsniff plus a pinhole in the TCP layer.
+**Key insight:** Clients without certificate pinning accept any CA-signed cert; sslsplit terminates TLS and forwards plaintext to its log, so any TLS-wrapped protocol (AMQP, IRC, MQTT, LDAPS, custom binary) becomes observable and — with a trivial mitmproxy patch — modifiable. mitmproxy se enfoca en HTTP(S); para protocolos arbitrarios, usa sslsplit/sslsniff mas un pinhole en la capa TCP.
 
 **References:** TAMUctf 2019 — Homework Help, writeup 13477
 

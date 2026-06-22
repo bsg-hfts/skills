@@ -49,5 +49,5 @@ zaproxy -daemon -host 127.0.0.1 -port 8090 -config api.disablekey=true
 ### Usage Strategy
 
 - Usa ZAP para coverage inicial y deteccion de misconfig basica.
-- Confirma hallazgos manualmente en Burp headless/curl antes de invertir tiempo.
+- Confirma hallazgos manualmente en mitmdump/curl antes de invertir tiempo.
 - Para retos CTF de logica compleja, no dependas solo de scanner automatico.

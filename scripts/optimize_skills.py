@@ -36,7 +36,7 @@ CATEGORY_BLOCKS = {
 - Objetivo inicial: confirmar una primitiva web pequeña (read, bypass o SSRF interno) antes de cadenas largas.
 - Orden recomendado: recon de superficie -> validacion de input sink -> PoC minimo -> escalado.
 - Tiempo maximo por hipotesis: 10-15 minutos; si no hay señal, pivota a otro bug family.
-- Salida minima util: request reproducible (raw curl/Burp), respuesta esperada y condicion de exito.
+- Salida minima util: request reproducible (raw curl/mitmdump), respuesta esperada y condicion de exito.
 """.strip("\n"),
     "ctf-pwn": """
 ## Modo de ejecucion eficiente por categoria

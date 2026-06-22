@@ -20,7 +20,7 @@ Sigue los pasos y referencias del contenido base de esta habilidad.
 - No reutilices payloads ni comandos contra infraestructura real sin permiso explícito.
 - Revisa y adapta rutas, hosts y credenciales placeholders antes de ejecutar.
 - Prioriza pruebas no destructivas y confirma cambios de estado antes de acciones invasivas.
-- Si usas Burp, fuerza modo headless (sin GUI) y aplica `burp-headless`.
+- Usa mitmdump como proxy CLI principal para captura, replay y validacion reproducible.
 
 ## Modo de ejecucion eficiente
 
@@ -41,7 +41,7 @@ Sigue los pasos y referencias del contenido base de esta habilidad.
 - Objetivo inicial: confirmar una primitiva web pequeña (read, bypass o SSRF interno) antes de cadenas largas.
 - Orden recomendado: recon de superficie -> validacion de input sink -> PoC minimo -> escalado.
 - Tiempo maximo por hipotesis: 10-15 minutos; si no hay señal, pivota a otro bug family.
-- Salida minima util: request reproducible (raw curl/Burp headless (sin GUI)), respuesta esperada y condicion de exito.
+- Salida minima util: request reproducible (raw curl/mitmdump), respuesta esperada y condicion de exito.
 
 ## Contenido base
 
@@ -80,8 +80,7 @@ go install github.com/ffuf/ffuf/v2@latest
 - [web-fingerprint-and-waf.md](web-fingerprint-and-waf/SKILL.md) - Stack and WAF fingerprinting using WhatWeb, WAFW00F, Nikto, and Nuclei to prioritize likely exploit paths
 - [web-recon-and-fingerprinting.md](web-recon-and-fingerprinting/SKILL.md) - Lightweight HTTP profiling and tech detection with reproducible recon outputs
 - [content-discovery-and-fuzzing.md](content-discovery-and-fuzzing/SKILL.md) - Focused discovery playbooks for directories, extensions, parameters, and host-based routing
-- [burp-headless.md](burp-headless/SKILL.md) - Mandatory Burp Suite Professional headless workflow (no GUI) for reproducible scans and validation
-- [web-proxy-and-active-scanning.md](web-proxy-and-active-scanning/SKILL.md) - Burp, OWASP ZAP, and mitmproxy workflows for capture, mutation, replay, and low-noise active checks
+- [web-proxy-and-active-scanning.md](web-proxy-and-active-scanning/SKILL.md) - OWASP ZAP y mitmproxy/mitmdump para captura, mutacion, replay y active checks de bajo ruido
 - [zap-baseline.md](zap-baseline/SKILL.md) - OWASP ZAP baseline and API scan routines for quick passive coverage before manual exploitation
 - [api-httpie-and-rest.md](api-httpie-and-rest/SKILL.md) - HTTPie-first API attack patterns for BOLA/IDOR, mass assignment, header trust, and GraphQL abuse
 - [jwt-token-tooling.md](jwt-token-tooling/SKILL.md) - JWT/JWS/JWE operational tooling with jwt_tool and hashcat for key confusion, replay, and weak-secret attacks
