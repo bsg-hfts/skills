@@ -40,7 +40,7 @@ Sigue los pasos y referencias del contenido base de esta habilidad.
 - Objetivo inicial: confirmar una primitiva web pequeña (read, bypass o SSRF interno) antes de cadenas largas.
 - Orden recomendado: recon de superficie -> validacion de input sink -> PoC minimo -> escalado.
 - Tiempo maximo por hipotesis: 10-15 minutos; si no hay señal, pivota a otro bug family.
-- Salida minima util: request reproducible (raw curl/Burp), respuesta esperada y condicion de exito.
+- Salida minima util: request reproducible (raw curl/Burp headless (sin GUI)), respuesta esperada y condicion de exito.
 
 ## Contenido base
 
@@ -72,7 +72,7 @@ For core injection attacks (SQLi, SSTI, SSRF, XXE, command injection), see [serv
 - Base64 decode suspicious blobs — Java serialized data starts with magic bytes `AC ED 00 05`
 - Search for `ObjectInputStream`, `readObject`, `readUnshared` in source
 - Content-Type `application/x-java-serialized-object`
-- Burp extension: Java Deserialization Scanner
+- Burp headless scan profile para Java deserialization + validacion manual de magic bytes
 
 **Key insight:** Deserialization triggers code in `readObject()` methods of classes on the classpath. If a "gadget chain" exists (sequence of classes whose `readObject` → method calls lead to arbitrary execution), the attacker gets RCE without needing to upload code.
 
@@ -174,8 +174,7 @@ asyncio.run(race('http://target/api/transfer',
 - **File upload + use:** Upload file, server validates then moves → access file between upload and validation (or between validation and deletion)
 
 ```bash
-# Turbo Intruder (Burp) — most reliable for precise timing
-# Or use curl with GNU parallel:
+# Race testing por CLI (sin GUI):
 seq 50 | parallel -j50 curl -s -X POST http://target/api/redeem \
   -H 'Cookie: session=TOKEN' -d 'code=SINGLE_USE_CODE'
 ```
